@@ -1,7 +1,6 @@
 # safe-ose-2025
 
-Stefan and Jarrod are submitting a preliminary proposals to the Safe-OSE solicitation:
-https://new.nsf.gov/funding/opportunities/safe-ose-safety-security-privacy-open-source-ecosystems/nsf24-608/solicitation
+Stefan and Jarrod are submitting a preliminary proposals to the [Safe-OSE solicitation](https://new.nsf.gov/funding/opportunities/safe-ose-safety-security-privacy-open-source-ecosystems/nsf24-608/solicitation).
 
 The proposal would cover 50% of Stefan and 50% of Jarrod for the first year and 100% of Stefan and 100% of Jarrod for the second year.
 It would also fund two smallish developer (security) summits the first year and three the second year.
