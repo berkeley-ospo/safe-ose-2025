@@ -1,0 +1,148 @@
+\documentclass[titlepage,12pt]{amsart}
+% The Proposal and Award Policies and Procedures Guide
+% (PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg)
+% mandates, in Chapter 2, section B.2, that the main text should have a font size no less
+% than 11 points for *most* typefaces (including Computer Modern Roman and Times (new) Roman).
+% 
+% Actually, Helvetica (a.k.a. Arial), Palatino and Courier New can drop
+% to 10 point font size, according to the PAPPG,  but be aware:
+% 10-point fonts (whatever the typeface) will promote reader fatigue.
+% Reader fatigue never works to the author's advantage.
+%
+% This sample is set in 12 point type.
+%
+\usepackage{amsmath,amsthm,amssymb,amscd}
+\usepackage{epsf}
+%\usepackage{cite}		% compress citations
+\pagenumbering{gobble}		% Research.gov wants no page numbering
+\tolerance9000
+%\pagestyle{headings}               % no headers or footers on pages
+\usepackage{wrapfig}
+\usepackage[svgnames]{xcolor}
+%
+% The Proposal and Award Policies and Procedures Guide
+% (PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg)
+% mandates, in Chapter 2, section B.2, that margins must be at least 1 inch in all directions.
+%
+%\advance\paperheight1.00cm
+\advance\textheight1.00cm
+\advance\vsize1.00cm
+\advance\topskip-0.5cm
+\advance\voffset-0.5cm
+%
+\oddsidemargin0.15cm
+\evensidemargin0.15cm
+\textwidth16.1cm
+%
+% Reformat Part headings: no number
+\makeatletter
+\renewcommand{\partname}{}
+\renewcommand\@seccntformat[1]{%
+  \ifstrequal{#1}{part}{%
+  }{
+    \protect\textup{\protect\@secnumfont
+      \csname the#1\endcsname
+      \protect\@secnumpunct
+    }
+  }
+}
+\renewcommand\section{\@startsection{section}{2}%
+  \z@{.5\linespacing\@plus.7\linespacing}{-.5em}%
+  {\normalfont\bf}}
+\renewcommand\subsection{\@startsection{subsection}{2}%
+  \z@{.5\linespacing\@plus.7\linespacing}{-.5em}%
+  {\normalfont\itshape}}
+\makeatother
+%
+\renewcommand{\footnotesize}{\small\spaceskip4pt plus1.5pt}
+%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lemma}[thm]{Lemma}
+\theoremstyle{definition}
+\newtheorem{notn}[thm]{Notation}
+\numberwithin{equation}{section}
+
+\newcommand\Z{{\mathbb Z}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\C{{\mathbb C}}
+\newcommand\F{{\mathbb F}}
+\newcommand{\G}{{\mathcal{G}}}
+\newcommand{\T}{{\mathcal{T}}}
+\newcommand\Hom{\text{Hom}}
+\newcommand\rank{\mathop{\text{rank}}}
+\let\tensor=\otimes
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{hyperref}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+%
+%\usepackage[style=ieee]{biblatex}
+%\usepackage[citestyle=authoryear-comp,bibstyle=numeric, natbib=true, backend=bibtex,hyperref=true,maxbibnames=99,maxcitenames=2]{biblatex}
+\usepackage[citestyle=numeric,bibstyle=numeric, natbib=true, backend=bibtex,hyperref=true,maxbibnames=99,maxcitenames=2]{biblatex}
+\addbibresource{grant.bib}
+%
+%% Handle  section numbering within parts
+\usepackage{chngcntr}
+\counterwithin*{section}{part}
+%\patchcmd{\part}{\normalfont}{\Large}{}{}
+\usepackage{etoolbox}
+\patchcmd{\part}{\raggedright}{\hfil}{}{}
+%%
+\title{NSF Safe-OSE: Securing the Scientific Python Ecosystem}
+
+\author{ K. Jarrod Millman and Stéfan J. van der Walt\\ University of California, Berkeley}
+%%% begin fancyhdr
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\makeatletter
+\edef\mytitle{\@title}
+\makeatother
+\rhead{}
+\chead{\mytitle}
+\lhead{}
+\renewcommand{\headrulewidth}{0pt}
+%% end fancyhdr
+
+% project names
+\newcommand{\spose}{$SP-OSE$}
+\newcommand{\jupyterose}{$Jupyter-OSE$}
+\newcommand{\spp}{$SPP$}
+\newcommand{\spcore}{$SPP Core Projects$}
+\newcommand{\spcommunity}{$SPP Community$}
+\newcommand{\spsecurity}{$SPP Security Working Group$}
+\newcommand{\spec}{$SPEC$}
+\newcommand{\specsteering}{$SPEC Steering Committee$}
+\newcommand{\toolsteering}{$Tools / Service Steering Committee$}
+
+\begin{document}
+%
+\maketitle
+%
+\part{Project Summary}
+\input{summary}
+
+\newpage
+
+\part{Project Description}
+\input{description}
+
+% uncomment to include bibliography
+\newpage
+\part{References}
+\printbibliography[heading=none]
+
+\newpage
+\part{Data Management and Sharing Plan}
+\input{data-management}
+
+\newpage
+\part{Facilities}
+\input{facilities}
+
+\end{document}
