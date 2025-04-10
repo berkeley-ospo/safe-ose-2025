@@ -1,9 +1,10 @@
 # Introduction
 
-The **Scientific Python Open Source Ecosystem ($\spose$)** \citep{millman2011python, perez2011python} is a cornerstone of modern scientific computing, data analysis, and machine learning.
-Together with the *Jupyter Open Source Ecosystem ($\jupyterose$)* \citep{Kluyver2016jupyter}, it enables cutting-edge research across disciplines, from astrophysics to bioinformatics.
+With its vast array of open-source tools, frameworks, and libraries, the **Scientific Python Open Source Ecosystem ($\spose$)** \citep{millman2011python, perez2011python} has become an indispensable pillar of modern scientific computing, data analysis, and machine learning.
+The ecosystem supports the entire computational science lifecycle, from data gathering, to analysis, to publication and dissemination, and varies in generality from fundamental data structures, to general scientific algorithms, to domain-specific routines.
+Together with the *Jupyter Open Source Ecosystem ($\jupyterose$)* \citep{Kluyver2016jupyter}, it enables cutting-edge research across disciplines, from astrophysics \citep{astropy:2013, astropy:2018, astropy:2022} to seismology \citep{Beyreuther2010, Megies2011, Krischer2015}.
 Python's recent ascension to the #1 programming language on GitHub \citep{Octoverse2024}, surpassing JavaScript, underscores the critical importance and widespread use of these ecosystems.
-That surge in popularity also reflects the increasing centrality of data-driven approaches in science, education, and industry, making the security and reliability of these ecosystems paramount to global scientific and technological progress.
+That surge in popularity also reflects the increasing centrality of data-driven approaches in science, education, industry, and defense, making the security and reliability of these ecosystems paramount to national and global scientific and technological progress.
 
 # Current Status
 
@@ -12,22 +13,105 @@ That surge in popularity also reflects the increasing centrality of data-driven 
 -->
 
 The $\spose$ is a mature, vibrant open-source ecosystem of independent, interconnected projects used by researchers across diverse scientific disciplines to perform complex analyses, simulations, and visualizations.
-At its core are libraries widely used in computational science, such as NumPy (numerical computing) \citep{vanderwalt2011numpy, harris2020array} and SciPy (scientific algorithms) \citep{virtanen2020scipy}.
-Domain-specific projects, such as Astropy (astronomy), Scikit-HEP (particle physics), and Pangeo (geoscience), build upon these core libraries to provide specialized tools for various fields.
-
-The $\spose$ supports global communities of practice that collaboratively work to address emerging scientific needs.
+The $\spose$ brings together people from around the world who work together to solve new scientific challenges.
 It employs a decentralized governance structure, with individual projects retaining autonomy over their leadership, decision-making, and development processes.
 This community-driven approach allows for rapid innovation while seeking community consensus around ecosystem-wide decisions and standards.
 
-In 2020, the PIs founded the **Scientific Python Project ($\spp$)** \citep{spp} to sustain the $\spose$ and support its community of contributors and maintainers.
-It has since grown rapidly, with 69 members in its GitHub organization and 446 members on its Discourse forum.
-Through the $\spp$, the PIs recruited a governing team of community leaders and managers, established central community spaces, brought developers together for cross-project Developer Summits, updated and maintained classic community-owned learning resources, aggregated and disseminated best development practices, and built and supported common maintainer tooling.
+Consider a physicist studying particle collisions at the High Luminosity Large Hadron Collider (HL-LHC) to investigate fundamental questions about matter-antimatter asymmetry and the nature of dark matter.
+They might use IRIS-HEP's Elastic Analysis Facility, a cloud-based platform that provides a shared computing environment for high-energy physics researchers to process and analyze massive datasets, share code and results, and collaborate with colleagues globally.
+Then, to analyze collision data, the physicist might rely on Scikit-HEP (see Figure \ref{fig:scikit-hep}), a $\spose$ sub-ecosystem specifically designed for high-energy physics analysis \citep{Rodrigues:2020syo}.
+Scikit-HEP is built on a \emph{stack} of packages, including foundational scientific Python libraries like NumPy for numerical computing \citep{vanderwalt2011numpy, harris2020array}, SciPy for general scientific computing algorithms \citep{virtanen2020scipy}, Matplotlib for data visualization \citep{hunter2007matplotlib}, Pandas for data manipulation \citep{mckinney-proc-scipy-2010}, and Awkward Array for handling complex hierarchical data structures \citep{Pivarski_Awkward_Array_2018}.
+It also depends on domain-specific packages such as Uproot for reading ROOT files \citep{scikit-hep_uproot3_3_14_4}, Hist for advanced histogramming \citep{scikit-hep_boost_histogram_1_5_2}, Vector for manipulating physical vectors \citep{vector_v0_10_0}, and Particle \citep{scikit_hep_particle_v0_25_3} for accessing particle properties from the Particle Data Group database \citep{PhysRevD.110.030001}.
 
-We also created the **Scientific Python Ecosystem Coordination ($\spec$)** process \citep{specs} to help establish cross-project technical specifications, highlight shared resources, and document best practices.
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=13cm]{figures/shells-hep.pdf}
+  \end{center}
+  \caption{Scikit-HEP domain stack.}
+  \label{fig:scikit-hep}
+\end{figure}
+
+This example illustrates the concept of a \emph{domain stack} in the scientific Python ecosystem, where libraries are built in layers, with foundational packages at the bottom and more specialized, domain-specific packages at the top.
+The foundational libraries provide basic functionality needed across many domains, while the upper-level packages build upon these foundational libraries to provide specialized tools for various fields to address the specific needs of researchers working in particular fields.
+There are many such domain stacks like Scikit-HEP, including Astropy (astronomy), NIPY (neuroimaging), PySAL (geospatial data science), scverse (single-cell biology), and Biopython (bioinformatics).
+Inside a domain stack, each package typically has its own developer community, communication channels, websites, road maps, documentation, engineering and packaging solutions, and governance structures.
+While this loosely coupled development model has some advantages, it also means that there are redundancies due to inherent fragmentation in the scientific Python ecosystem.
+This fragmentation poses significant challenges in terms of sustainability, direction, compatibility, user experience, collaboration, efficiency, performance, and deployment.
+
+## Scientific Python Project (\spp) {-}
+
+In 2020, the PIs founded the **Scientific Python Project ($\spp$)** \citep{spp} to coordinate and sustain the $\spose$ and support its community of contributors and maintainers.
+Through the $\spp$ (see Figure \ref{fig:scientific-python.org}), the PIs recruited a governing team of community leaders and managers, established central community spaces, brought developers together for cross-project Developer Summits, updated and maintained classic community-owned learning resources, aggregated and disseminated best development practices, and built and supported common maintainer tooling.
+$\spp$ has grown rapidly, with 80 team members and 323 followers for our GitHub organization, 29 affiliated Python libraries in our nightly wheel-hosting infrastructure, 330 subscribers to our YouTube channel, 471 members on our Discourse forum, and 672 members on our Discord server.
+We are holding our third annual Scientific Python Developer Summit this May.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=16cm]{figures/scientific-python.org.pdf}
+  \end{center}
+  \caption{Scientific Python Homepage.}
+  \label{fig:scientific-python.org}
+\end{figure}
+
+All software is licensed under the modified BSD-3 license and educational material under Creative Commons licenses like CC0 or CC-BY.
+We follow an open and consensus-oriented governance model that encourages broad participation in activities, discussions, design, and decision-making processes, conducted transparently on open channels like GitHub.
+Membership is open to all, established through active collaboration, and requires adhering to the code of conduct.
+Decisions are made through community discussions on public forums following a consensus-seeking approach, with sensitive topics (e.g., security issues and conduct violations) addressed privately when necessary.
+
+We created the **Scientific Python Ecosystem Coordination ($\spec$)** process \citep{specs} to help establish cross-project technical specifications, highlight shared resources, and document best practices (see Figure \ref{fig:specs}).
+<!--
 We formed a **$\specsteering$** and engaged an initial set of 
-**$\spcore$** (IPython \citep{perez2007ipython}, NumPy, SciPy, Matplotlib \citep{hunter2007matplotlib}, Pandas \citep{mckinney-proc-scipy-2010}, NetworkX \citep{hagberg2008}, scikit-image \citep{vanderwalt2014scikit}, scikit-learn \citep{scikit-learn}, xarray \citep{hoyer2017xarray}, and zarr).
-The **$\specsteering$**, comprising a diverse group of 17 volunteers from various projects in the ecosystem, oversees the $\spec$ process with input from the larger community and in consultation with the maintainers of the $\spcore$.
-We also formed a **$\toolsteering$** to oversee the maintainence of a growing collection of tools that help projects across the ecosystem, including those supporting the $\spec$s.
+**$\spcore$**.
+(IPython \citep{perez2007ipython}, NumPy, SciPy, Matplotlib \citep{hunter2007matplotlib}, Pandas \citep{mckinney-proc-scipy-2010}, NetworkX \citep{hagberg2008}, scikit-image \citep{vanderwalt2014scikit}, scikit-learn \citep{scikit-learn}, xarray \citep{hoyer2017xarray}, and zarr).
+-->
+The $\specsteering$, comprising 17 volunteers from various projects in the ecosystem, oversees the $\spec$ process with input from the larger community and in consultation with the maintainers of the $\spcore$.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=15cm]{figures/specs.png}
+  \end{center}
+  \caption{Scientific Python Ecosystem Coordination.}
+  \label{fig:specs}
+\end{figure}
+
+The $\spcore$ are foundational projects that are depended upon by many other projects, and often provide basic data structures, drawing primitives, implementations of fundamental algorithms, or are metapackages that represent a particular scientific field.
+Due to their central position in the ecosystem, the policies, practices, and tooling used by the Core Projects are widely seen by the ecosystem and impact many other projects.
+They follow open and collaborative practices, including having a public version control system and bug tracker, code of conduct, contributors' guide, code review process, public roadmap, documented governance system, enhancement proposal process, and regular releases.
+They are developed openly by their respective communities, with contributors from multiple institutions.
+They commonly use the 3-clause BSD license: a highly permissive free and open source software license, imposing minimal restrictions on use and re-distribution.
+
+The growing list of $\spcore$ (in alphabetic order) currently includes:
+\begin{itemize}
+\item \textbf{ipython} (16.4k GH stars, 4.5k GH forks) \citep{perez2007ipython}, an interactive environment offering enhanced code execution and exploration,
+and the primary kernel for Jupyter;
+\item \textbf{matplotlib} (21k GH stars, 7.8k GH forks), a visualization library for the creation of high-quality plots for scientific analysis and communication;
+\item \textbf{NetworkX} (15.6k GH stars, 3.3k GH forks) \citep{hagberg2008}, a library for the creation, manipulation, and analysis of complex networks or graphs;
+\item \textbf{NumPy} (29.3k GH stars, 10.7k GH forks), the fundamental array data structure used throughout the ecosystem;
+\item \textbf{pandas} (45.1k GH stars, 18.4k GH forks), a library for data manipulation and analysis, offering essential tools for tasks such as data cleaning, exploration, transformation, and statistical analysis;
+\item \textbf{PySAL} (1.4k GH stars, 307 GH forks) \citep{pysal_github}, a domain stack and Python metapackage for geospatial data science, supporting spatial analysis tasks such as detecting spatial clusters, modeling spatial relationships, and performing exploratory spatio-temporal data analysis;
+\item \textbf{scikit-hep} (165 GH stars, 35k GH forks) \citep{scikit_hep_github}, a domain stack and a Python ecosystem tailored for high-energy physics research, providing tools for handling particle physics datasets, histogramming, fitting models, and interfacing with HEP-specific libraries like ROOT;
+\item \textbf{scikit-image} (6.2k GH stars, 2.3k GH forks), an image processing library, offering tools for tasks such as image filtering, segmentation, and feature extraction \citep{vanderwalt2014scikit};
+\item \textbf{scikit-learn} (61.7k GH stars, 25.8k GH forks) \citep{pedregosa2011scikit}, a machine-learning library, offering tools for classification, regression, clustering, dimensionality reduction, etc.;
+\item \textbf{SciPy} (13.5k GH stars, 5.3k GH forks) \citep{virtanen2020scipy}, a collection of scientific computing routines, with algorithms for interpolation, linear algebra, optimization, signal processing, and more;
+\item \textbf{xarray} (3.8k GH stars, 1.1k GH forks), a library that implements labeled, multi-dimensional arrays;
+\item \textbf{zarr-python} (1.7k GH stars, 324 GH forks) \citep{zarr_python_v2_18_7}, a library for efficient storage and manipulation of large, compressed, and chunked multi-dimensional arrays.
+\end{itemize}
+While GitHub stars aren't definitive measures, it is worth noting that four of the $\spcore$ are in the top 500 repositories on GitHub according to stars \citep{gitstar_ranking}.
+The maintainers of each of the $\spcore$ has agreed to become involved with the $\spec$ process; however, many more projects small and large participate and even more adopt the various $\spec$s for their own projects.
+
+In addition to these projects, we also develop and maintain of a growing collection of **$\sptools$**---overseen by a $\toolsteering$---that help projects across the ecosystem, including those supporting the $\spec$s.
+<!--
+$\spp$ supports on the order of fifteen tools, ranging from release management to community organization, and two services: a discussion forum and web analytics.
+-->
+The growing list of developer tools includes
+\begin{itemize}
+\item \textbf{cookie} (334 GH stars, 56 GH forks) \citep{scientific_python_cookie_github}, a template generator for new Python projects based on the Scientific Python Developer Guide. It ensures that new repositories adhere to best practices in development, testing, and deployment, which reduces risks associated with poorly configured projects and promotes sustainable software practices.
+\item \textbf{repo-review} (72 GH stars, 6 GH forks) \citep{repo_review_github}, a framework for evaluating repositories against predefined guidelines from the Scientific Python Developer Guide. By identifying configuration issues and enforcing compliance with best practices, it helps maintain high standards across the ecosystem, reducing vulnerabilities and improving collaboration.
+\item \textbf{lazy-loader} (163 GH stars, 22 GH forks) \citep{lazy_loader_github}, a library that implements lazy loading for Python submodules and functions, reducing import times and memory usage by loading components only when accessed. By optimizing resource usage, it minimizes potential vulnerabilities associated with unnecessary imports, enhancing the security and efficiency of scientific Python libraries.
+\item \textbf{pytest-doctestplus} (104 GH stars, 40 GH forks) \citep{pytest_doctestplus_github}, a plugin for the pytest framework that extends doctest capabilities to support advanced testing of documentation files, such as `.rst` or `.md`. By ensuring that code examples in documentation are accurate and functional, it reduces errors and improves trust in scientific Python libraries.
+\item \textbf{spin} (109 GH stars, 21 GH forks) \citep{spin_github}, a developer tool designed to simplify common build and development tasks for scientific Python libraries. It abstracts complex command-line operations into user-friendly commands, reducing human error and ensuring consistent workflows across projects, which enhances both productivity and security.
+\end{itemize}
+
 Through these and other community initiatives, the $\spp$ fosters interoperability, reduces maintenance burden, and provides a more cohesive experience for users.
 
 # National, Societal, and Economic Impact
@@ -36,7 +120,7 @@ Through these and other community initiatives, the $\spp$ fosters interoperabili
     2. Describe the national/societal/economic impacts of the OSE.
 -->
 
-The $\spose$ has far-reaching impacts on scientific research, national security, economic growth and innovation, and education and workforce development.
+The $\spose$ has far-reaching impacts on scientific research, education and workforce development, economic growth and innovation, and national security.
 
 ## Scientific Research {-}
 
@@ -63,16 +147,11 @@ to indvidual labs.
 - small labs to international collaborations
 -->
 
-## National Security {-}
+## Education and Workforce Development {-}
 
-The $\spose$ is used to inform critical government decisions, to control expensive infrastructure, and to access sensitive health and scientific data---including operating on Department of Energy (DOE) clusters \citep{ravich2020seab}.
-It enables sophisticated intelligence analysis, extracting actionable insights from vast datasets \citep{coats2019aim}.
-It also powers cutting-edge defense technologies, from complex simulations to target recognition algorithms, enhancing military capabilities and readiness \citep{dantas2024asapy}.
-
-<!--
-In intelligence analysis, the ecosystem's advanced data processing and machine learning capabilities enable sophisticated analytics for gathering intelligence and assessing threats, facilitating the extraction of actionable insights from vast datasets.
-Moreover, the $\spose$ supports the research and development of cutting-edge defense technologies, powering complex simulations and target recognition algorithms, while its extensive libraries enable intricate modeling and data analysis essential for military applications.
--->
+<!--Python was created as a teaching language...-->
+The ecosystem plays a crucial role in education, with Python increasingly adopted as the primary language taught at universities \citep{paffenroth2015python, zhang2019applying, mantusov2021python, bati2022integration}.
+At UC Berkeley, for instance, the $\spose$ is used across fields as diverse as astronomy, digital humanities, engineering, neuroimaging, and statistics, preparing students for careers in research, government, and industry.
 
 ## Economic Growth and Innovation {-}
 
@@ -84,11 +163,16 @@ It underpins the majority of machine learning pipelines, enables risk analysis f
 - google's use
 -->
 
-## Education and Workforce Development {-}
+## National Security {-}
 
-<!--Python was created as a teaching language...-->
-The ecosystem plays a crucial role in education, with Python increasingly adopted as the primary language taught at universities \citep{paffenroth2015python, zhang2019applying, mantusov2021python, bati2022integration}.
-At UC Berkeley, for instance, the $\spose$ is used across fields as diverse as astronomy, digital humanities, engineering, neuroimaging, and statistics, preparing students for careers in research, government, and industry.
+The $\spose$ is used to inform critical government decisions, to control expensive infrastructure, and to access sensitive health and scientific data---including operating on Department of Energy (DOE) clusters \citep{ravich2020seab}.
+It enables sophisticated intelligence analysis, extracting actionable insights from vast datasets \citep{coats2019aim}.
+It also powers cutting-edge defense technologies, from complex simulations to target recognition algorithms, enhancing military capabilities and readiness \citep{dantas2024asapy}.
+
+<!--
+In intelligence analysis, the ecosystem's advanced data processing and machine learning capabilities enable sophisticated analytics for gathering intelligence and assessing threats, facilitating the extraction of actionable insights from vast datasets.
+Moreover, the $\spose$ supports the research and development of cutting-edge defense technologies, powering complex simulations and target recognition algorithms, while its extensive libraries enable intricate modeling and data analysis essential for military applications.
+-->
 
 # Targeted Classes of Vulnerabilities and Broader Impacts
 
@@ -119,7 +203,7 @@ Recent attacks exploiting compromised maintainer credentials demonstrate the sev
 
 ## Insider Attacks (Vulnerability) {-}
 
-The ecosystem's inclusive approach, which encourages contributions from a global community of (mostly self-selecting) volunteers, expands the potential attack surface.
+The ecosystem's approach, which encourages contributions from a global community of (mostly self-selecting) volunteers, expands the potential attack surface.
 This risk is compounded by a maintainer onboarding model that often elevates privileges to active contributors without comprehensive vetting.
 The reliance on an over-worked volunteer developer community can lead to reduced vigilance and oversight.
 The complexity and breadth of some core libraries, and how they are used in combination, makes it challenging for any single individual to have a comprehensive understanding of risks, potentially allowing subtle malicious changes to go unnoticed.
