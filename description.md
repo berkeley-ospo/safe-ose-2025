@@ -17,22 +17,27 @@ The $\spose$ brings together people from around the world who work together to s
 It employs a decentralized governance structure, with individual projects retaining autonomy over their leadership, decision-making, and development processes.
 This community-driven approach allows for rapid innovation while seeking community consensus around ecosystem-wide decisions and standards.
 
-Consider a physicist studying particle collisions at the High Luminosity Large Hadron Collider (HL-LHC) to investigate fundamental questions about matter-antimatter asymmetry and the nature of dark matter.
-They might use IRIS-HEP's Elastic Analysis Facility, a cloud-based platform that provides a shared computing environment for high-energy physics researchers to process and analyze massive datasets, share code and results, and collaborate with colleagues globally.
-Then, to analyze collision data, the physicist might rely on Scikit-HEP (see Figure \ref{fig:scikit-hep}), a $\spose$ sub-ecosystem specifically designed for high-energy physics analysis \citep{Rodrigues:2020syo}.
-Scikit-HEP is built on a \emph{stack} of packages, including foundational scientific Python libraries like NumPy for numerical computing \citep{vanderwalt2011numpy, harris2020array}, SciPy for general scientific computing algorithms \citep{virtanen2020scipy}, Matplotlib for data visualization \citep{hunter2007matplotlib}, Pandas for data manipulation \citep{mckinney-proc-scipy-2010}, and Awkward Array for handling complex hierarchical data structures \citep{Pivarski_Awkward_Array_2018}.
-It also depends on domain-specific packages such as Uproot for reading ROOT files \citep{scikit-hep_uproot3_3_14_4}, Hist for advanced histogramming \citep{scikit-hep_boost_histogram_1_5_2}, Vector for manipulating physical vectors \citep{vector_v0_10_0}, and Particle \citep{scikit_hep_particle_v0_25_3} for accessing particle properties from the Particle Data Group database \citep{PhysRevD.110.030001}.
+Consider a physicist studying particle collisions at the Large Hadron Collider (LHC) to investigate questions about the interactions of matter and the fundamental forces of Nature and search for evidence of new physics.
+They might use a deployment of the Institute for Research and Innovation in Software for High Energy Physics \citep{Bockelman:2023gbj} (IRIS-HEP)'s Elastic Analysis Facility --- a cloud-based platform that provides shared computing environments for high energy physics (HEP) researchers to process and analyze massive datasets, share code and results, and collaborate with colleagues globally.
+Then, to analyze collision data, the physicist might rely on tools from Scikit-HEP (see Figure \ref{fig:scikit-hep}), a $\spose$ sub-ecosystem specifically designed for Pythonic high energy physics analysis \citep{Rodrigues:2020syo}.
+Scikit-HEP intentionally builds on a \emph{stack} of packages, including foundational scientific Python libraries like NumPy for numerical computing \citep{vanderwalt2011numpy, harris2020array}, SciPy for general scientific computing algorithms \citep{virtanen2020scipy}, Matplotlib for data visualization \citep{hunter2007matplotlib}, and Pandas for data manipulation \citep{mckinney-proc-scipy-2010}.
+From this core stack, Scikit-HEP builds interoperable packages that collectively address more domain-specific computing operations.
+Physics driven data patterns and reduction choices are addressed through Awkward Array for handling complex hierarchical data structures \citep{Pivarski_Awkward_Array_2018} and boost-histogram and Hist for advanced multidimensional histogramming \citep{henry_schreiner-proc-scipy-2020,scikit-hep_boost_histogram_1_5_2}.
+Successively more HEP specific operations additionally use Uproot for I/O with the HEP-specific ROOT binary data format \citep{scikit-hep_uproot3_3_14_4}, Vector for physical and Lorentz vector transformations and operations \citep{vector_v0_10_0}, and Particle \citep{scikit_hep_particle_v0_25_3} for accessing particle properties from the Particle Data Group database \citep{PhysRevD.110.030001}.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=13cm]{figures/shells-hep.pdf}
   \end{center}
-  \caption{Scikit-HEP domain stack.}
+  \caption{The components of the Python-based analysis ecosystem for HEP that form the Scikit-HEP domain stack.
+  The bottom ring consists of the foundational computational libraries in the Scientific Python ecosystem.
+  The successive rings contain tools that are more specifically designed for particle physics analysis and applications; while the first HEP-specific layer is broadly used across the field of particle physics, each layer becomes more operation- or experiment-specific.
+  Collectively, the Scientific Python ecosystem and the Scikit-HEP domain stack enable the next generation of LHC analysis infrastructure developed by IRIS-HEP \citep{Bockelman:2023gbj}.}
   \label{fig:scikit-hep}
 \end{figure}
 
 This example illustrates the concept of a \emph{domain stack} in the scientific Python ecosystem, where libraries are built in layers, with foundational packages at the bottom and more specialized, domain-specific packages at the top.
-The foundational libraries provide basic functionality needed across many domains, while the upper-level packages build upon these foundational libraries to provide specialized tools for various fields to address the specific needs of researchers working in particular fields.
+The foundational libraries provide basic functionality needed across many domains, while the upper-level packages build upon these foundational libraries to provide domain specific tooling to address the specific needs of researchers working in particular fields.
 There are many such domain stacks like Scikit-HEP, including Astropy (astronomy), NIPY (neuroimaging), PySAL (geospatial data science), scverse (single-cell biology), and Biopython (bioinformatics).
 Inside a domain stack, each package typically has its own developer community, communication channels, websites, road maps, documentation, engineering and packaging solutions, and governance structures.
 While this loosely coupled development model has some advantages, it also means that there are redundancies due to inherent fragmentation in the scientific Python ecosystem.
@@ -89,7 +94,7 @@ and the primary kernel for Jupyter;
 \item \textbf{NumPy} (29.3k GH stars, 10.7k GH forks), the fundamental array data structure used throughout the ecosystem;
 \item \textbf{pandas} (45.1k GH stars, 18.4k GH forks), a library for data manipulation and analysis, offering essential tools for tasks such as data cleaning, exploration, transformation, and statistical analysis;
 \item \textbf{PySAL} (1.4k GH stars, 307 GH forks) \citep{pysal_github}, a domain stack and Python metapackage for geospatial data science, supporting spatial analysis tasks such as detecting spatial clusters, modeling spatial relationships, and performing exploratory spatio-temporal data analysis;
-\item \textbf{scikit-hep} (165 GH stars, 35k GH forks) \citep{scikit_hep_github}, a domain stack and a Python ecosystem tailored for high-energy physics research, providing tools for handling particle physics datasets, histogramming, fitting models, and interfacing with HEP-specific libraries like ROOT;
+\item \textbf{scikit-hep} (165 GH stars, 35 GH forks) \citep{scikit_hep_github}, a domain stack and a Python ecosystem tailored for high-energy physics research, providing tools for handling particle physics datasets, histogramming, fitting models, and interfacing with HEP-specific libraries like ROOT;
 \item \textbf{scikit-image} (6.2k GH stars, 2.3k GH forks), an image processing library, offering tools for tasks such as image filtering, segmentation, and feature extraction \citep{vanderwalt2014scikit};
 \item \textbf{scikit-learn} (61.7k GH stars, 25.8k GH forks) \citep{pedregosa2011scikit}, a machine-learning library, offering tools for classification, regression, clustering, dimensionality reduction, etc.;
 \item \textbf{SciPy} (13.5k GH stars, 5.3k GH forks) \citep{virtanen2020scipy}, a collection of scientific computing routines, with algorithms for interpolation, linear algebra, optimization, signal processing, and more;
