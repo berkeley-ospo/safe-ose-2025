@@ -17,6 +17,8 @@ $(BUILDDIR)/figures/%.pdf: figures/%.svg
 	inkscape --export-filename=$@ $<
 
 grant: $(BUILDDIR) $(TEX) $(FIGURES)
+	cp figures/*pdf $(BUILDDIR)/figures/.
+	cp figures/*png $(BUILDDIR)/figures/.
 	cp grant.{tex,bib} $(BUILDDIR)
 	(cd $(BUILDDIR) && latexmk -pdf grant.tex)
 	cp $(BUILDDIR)/grant.pdf .
