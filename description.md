@@ -144,7 +144,7 @@ These examples highlight the power of Python-based workflows for managing large-
 -->
 
 In geospatial science, foundational scientific Python and domain-specific PySAL packages have seen widespread adoption \citep{rey2021pysal}.
-Specialized tools for spatial analysis---including geopandas, geoplot, momepy, and geosnap---build on these core projects.
+Specialized tools for spatial analysis---including geopandas, geoplot, and geosnap---build on these core projects.
 Moreover, the PySAL domain-stack is used by researchers from a wide
 array of topics across many disciplines including
 engineering \citep{fan2018network},
