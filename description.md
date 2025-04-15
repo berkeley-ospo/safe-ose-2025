@@ -95,7 +95,7 @@ and the primary kernel for Jupyter;
 \item \textbf{NumPy} (29.3k GH stars, 10.7k GH forks), the fundamental array data structure used throughout the ecosystem;
 \item \textbf{pandas} (45.1k GH stars, 18.4k GH forks), a library for data manipulation and analysis, offering essential tools for tasks such as data cleaning, exploration, transformation, and statistical analysis;
 \item \textbf{PySAL} (1.4k GH stars, 307 GH forks) \citep{pysal_github}, a domain stack and Python metapackage for geospatial data science, supporting spatial analysis tasks such as detecting spatial clusters, modeling spatial relationships, and performing exploratory spatio-temporal data analysis;
-\item \textbf{scikit-hep} (165 GH stars, 35 GH forks) \citep{scikit_hep_github}, a domain stack and a Python ecosystem tailored for high-energy physics research, providing tools for handling particle physics datasets, histogramming, fitting models, and interfacing with HEP-specific libraries like ROOT;
+\item \textbf{scikit-hep} (165 GH stars, 35 GH forks) \citep{scikit_hep_github}, a domain stack and a Python ecosystem tailored for high energy physics research, providing tools for handling particle physics datasets, histogramming, fitting models, and interfacing with HEP-specific libraries like ROOT;
 \item \textbf{scikit-image} (6.2k GH stars, 2.3k GH forks), an image processing library, offering tools for tasks such as image filtering, segmentation, and feature extraction \citep{vanderwalt2014scikit};
 \item \textbf{scikit-learn} (61.7k GH stars, 25.8k GH forks) \citep{pedregosa2011scikit}, a machine-learning library, offering tools for classification, regression, clustering, dimensionality reduction, etc.;
 \item \textbf{SciPy} (13.5k GH stars, 5.3k GH forks) \citep{virtanen2020scipy}, a collection of scientific computing routines, with algorithms for interpolation, linear algebra, optimization, signal processing, and more;
@@ -133,14 +133,17 @@ The $\spose$ has far-reaching impacts on scientific research, education and work
 The $\spose$ underpins cutting-edge research across a vast spectrum of scientific disciplines, from systems biology to materials science, and from astrophysics to climate modeling \citep{lin2022introduction}.
 This ecosystem supports endeavors ranging from large international collaborations like CERN's particle physics experiments to critical national resources such as the Rubin Observatory \citep{andreuzzi2021improving, elvira2022future, dux2024lightcurver}, as well as countless individual research projects in universities, national laboratories, and research centers worldwide \citep{kamatar2023lazy}.
 
-For example, in high-energy physics, researchers are increasingly using foundational scientific Python and domain-specific Scikit-HEP packages \citep{rodrigues2020scikit}.
+For example, in high energy physics, researchers are increasingly using foundational scientific Python and domain-specific Scikit-HEP packages \citep{rodrigues2020scikit}.
+The ATLAS and CMS LHC experiments ubiquitously use scientific Python libraries for all stages of end user data analysis, and rely on the full Scikit-HEP ecosystem for not only current analyses at the LHC, but also for the data analysis and computing models for the future High-Luminosity Large Hadron Collider (HL-LHC) upgrade \citep{Jung:2025oqh,Bockelman:2023gbj,Albin:2023szc,CERN-LHCC-2022-005,Shope:2025ukx}.
 The Belle II experiment utilizes Scikit-HEP's vector and particle packages for precision measurements of CP violation in B-meson decays, which are critical for testing predictions of the Standard Model \citep{belle2_core_software}.
 KM3NeT, the Kilometre Cube Neutrino Telescope, is a deep-sea research infrastructure in the Mediterranean Sea designed to detect high-energy neutrinos.
 It employs Scikit-HEP tools for tasks such as data analysis, simulation, and software development \citep{indico_cern_seminar_2020, hennig2023km3net}.
 Similarly, the Large Hadron Collider beauty (LHCb) Collaboration achieved a significant milestone by performing its first analysis entirely in Python.
 This analysis leveraged standard scientific Python packages alongside Scikit-HEP tools such as boost-histogram, iminuit, Particle, and uproot \citep{lhcb2022prompt}.
+The ecosystem is also enabling closer collaboration between researchers in high energy physics experiment and theory by providing, for the first time, tools that can be shared across the broader field.
+For example, the Scikit-HEP statistical modeling library pyhf \citep{pyhf_joss} has been used, and cited more than 170 times, by experimental collider physics (ATLAS), neutrino physics (MicroBooNE), flavour physics (Belle II) collaborations, the particle physics phenomenology community (SModels, MadAnalysis5), and in physics studies for future colliders (Future Circular Collider, Electron-Ion Collider, Muon Collider).
 <!--
-These examples highlight the power of Python-based workflows for managing large-scale high-energy physics datasets efficiently, marking a transition toward modern, flexible, and reproducible computational methodologies.
+These examples highlight the power of Python-based workflows for managing large-scale high energy physics datasets efficiently, marking a transition toward modern, flexible, and reproducible computational methodologies.
 -->
 
 In geospatial science, foundational scientific Python and domain-specific PySAL packages have seen widespread adoption \citep{rey2021pysal}.
