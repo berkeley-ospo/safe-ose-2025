@@ -1,5 +1,5 @@
 BUILDDIR := build
-FILES := data-management description facilities summary
+FILES := data-management description facilities summary personnel
 TEX := $(addprefix $(BUILDDIR)/,$(FILES:=.tex))
 SVGS := $(wildcard figures/*.svg)
 FIGURES := $(addprefix $(BUILDDIR)/,$(SVGS:.svg=.pdf))
@@ -25,10 +25,11 @@ grant: $(BUILDDIR) $(TEX) $(FIGURES)
 
 split: grant
 	pdftk grant.pdf cat 2 output summary.pdf
-	pdftk grant.pdf cat 3-14 output description.pdf
-	pdftk grant.pdf cat 15-22 output references.pdf
-	pdftk grant.pdf cat 23-24 output data.pdf
+	pdftk grant.pdf cat 3-15 output description.pdf
+	pdftk grant.pdf cat 16-23 output references.pdf
+	pdftk grant.pdf cat 24-25 output data.pdf
 	pdftk grant.pdf cat 25 output facilities.pdf
+	pdftk grant.pdf cat 26 output personnel.pdf
 
 clean: $(BUILDDIR)
 	rm -rf $(BUILDDIR)
