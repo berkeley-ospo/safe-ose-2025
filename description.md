@@ -56,7 +56,7 @@ This fragmentation poses significant challenges in terms of sustainability, dire
 To address these challenges, the PIs founded the **Scientific Python Project ($\spp$)** \citep{spp}, the managing organization that steers the development of the $\spose$, and the essential infrastructure needed to keep the ecosystem running (see Figure \ref{fig:scientific-python.org}).
 $\spp$'s mission is to better coordinate the $\spose$ and support its community of contributors and maintainers.
 Through the $\spp$, the PIs recruited a governing team of community leaders and managers, established central community spaces, brought developers together for cross-project Developer Summits, updated and maintained classic community-owned learning resources, aggregated and disseminated best development practices, and built and supported common maintainer tooling.
-$\spp$ has grown rapidly, with 80 team members and 324 followers for our GitHub organization, 29 affiliated Python libraries in our nightly wheel-hosting infrastructure, 331 subscribers to our YouTube channel, 471 members on our Discourse forum, and 675 members on our Discord server.
+$\spp$ has grown rapidly, with 80 team members and 345 followers for our GitHub organization, 29 affiliated Python libraries in our nightly wheel-hosting infrastructure, 331 subscribers to our YouTube channel, 471 members on our Discourse forum, and 689 members on our Discord server.
 We are holding our third annual Scientific Python Developer Summit this May.
 
 All software is licensed under the modified BSD-3 license and educational material under Creative Commons licenses like CC0 or CC-BY.
@@ -102,7 +102,15 @@ and the primary kernel for Jupyter;
 \item \textbf{xarray} (3.8k GH stars, 1.1k GH forks), a library that implements labeled, multi-dimensional arrays;
 \item \textbf{zarr-python} (1.7k GH stars, 324 GH forks) \citep{zarr_python_v2_18_7}, a library for efficient storage and manipulation of large, compressed, and chunked multi-dimensional arrays.
 \end{itemize}
+<!--
 While GitHub stars aren't definitive measures, it is worth noting that four of the $\spcore$ are in the top 500 repositories on GitHub according to stars \citep{gitstar_ranking}.
+https://www.irregex.vc/posts/a-look-into-the-most-starred-repos
+  Total number of repositories with stars > 100: 127,739
+  Total number of repositories with stars > 1000: 12,960
+  Total number of repositories with stars > 5000: 1,982
+  Total number of repositories with stars > 25000: 184
+-->
+While GitHub stars are not a definitive measure of impact, it is notable that nine of the SPEC Core Projects rank among the top 0.036% of all repositories on GitHub by stars \citep{gitstar_ranking}.
 The maintainers of each of the $\spcore$ has agreed to become involved with the $\spec$ process; however, many more projects small and large participate and even more adopt the various $\spec$s for their own projects.
 
 In addition to these projects, we also develop and maintain of a growing collection of **$\sptools$**---overseen by a $\toolsteering$---that help projects across the ecosystem, including those supporting the $\spec$s.
@@ -216,16 +224,22 @@ Moreover, the $\spose$ supports the research and development of cutting-edge def
     3. Articulate the targeted classes of safety, security, and/or privacy vulnerabilities to be addressed and the broader impacts of addressing them. Discuss, as appropriate, the potential attacks that could take advantage of these vulnerabilities.
 -->
 
+<!--
+https://www.fortinet.com/resources/cyberglossary/supply-chain-attacks 
+https://microtime.com/supply-chain-attacks-on-open-source-software/
+https://spectralops.io/blog/5-types-of-software-supply-chain-attacks-developers-should-know/
+https://www.splunk.com/en_us/blog/learn/supply-chain-attacks.html
+-->
 Despite its crucial role, the $\spose$ faces several critical classes of vulnerabilities that, if exploited, could have profound consequences for scientific integrity, national security, and industry.
 While we have identified these vulnerabilities separately for clarity, it is crucial to recognize that, in real-world attacks, these vulnerabilities are exploited in combination, creating complex and multifaceted threats.
-This interconnected nature of security risks underscores the need for a holistic approach to safeguarding the $\spose$, one that addresses all vulnerabilities simultaneously—a task that requires substantial work beyond what volunteer efforts alone can achieve.
+This interconnected nature of security risks underscores the need for a holistic approach to safeguarding the $\spose$, one that addresses all vulnerabilities simultaneously---a task that requires substantial work beyond what volunteer efforts alone can achieve.
 
 ## Supply Chain (Vulnerability) {-}
 
 The $\spose$, as an extensive network of independent, interconnected libraries, is particularly susceptible to supply chain attacks.
-An attacker could potentially compromise a widely-used dependency, inserting malicious code that would propagate throughout the ecosystem.
+An attacker who successfully compromises a widely-used dependency can insert malicious code that propagates throughout the ecosystem, impacting a vast array of downstream projects and users.
 Many scientific Python projects currently lack robust cryptographic signing and verification processes for releases, leaving them vulnerable to tampering and unauthorized modifications.
-The ecosystem also lacks a centralized system for reporting, tracking, and responding to vulnerabilities across projects.
+The ecosystem also lacks a centralized system for reporting, tracking, and responding to vulnerabilities across projects, leading to fragmented vulnerability tracking and delayed patching---especially for transitive dependencies.
 These risks have been clearly illustrated by the recent Ultralytics supply-chain attack, which demonstrated the potential for widespread impact through compromised dependencies \citep{pypi2024ultralytics}.
 
 ## Access Controls (Vulnerability) {-}
@@ -327,53 +341,36 @@ Based on what we learn in these meetings, we will develop sustainable strategies
 ## External Advisory Board {-}
 
 We will form an external advisory board with representatives from diverse $\spose$ end-user organizations.
-This board will include members from domain-specific projects (e.g., IRIS-HEP and Vera Rubin Observatory), industry (e.g., Google and CZ BioHub), national computing facilities (e.g., San Diego Supercomputer Center and TrustedCI), <!-- and funding agencies () --> and open-source foundations (e.g., PSF and OpenSSF), providing an authoratitive perspective on the impact of our mitigations and activities, rooted in day-to-day experience.
+This board will include members from domain-specific projects (e.g., IRIS-HEP and Vera Rubin Observatory), industry (e.g., Google and NVIDIA), national computing facilities (e.g., San Diego Supercomputer Center and TrustedCI), <!-- and funding agencies () --> and open-source foundations (e.g., PSF and OpenSSF), providing an authoratitive perspective on the impact of our mitigations and activities, rooted in day-to-day experience.
 
 We will conduct quarterly virtual meetings with this board to ensure that our work aligns with stakeholder needs and expectations, allowing for timely adjustments to our approach as necessary.
 Through these interactions, we will collect and analyze feedback to measure the perceived value and real-world impact of our implemented security measures.
 
-# Conclusion
+# Conclusion  
 
-<!--
-    6. Provide information to substantiate compliance with the eligibility requirements.
--->
-
-<!--
-The Scientific Python Open Source Ecosystem ($\spose$) stands at a critical juncture, facing unprecedented security challenges that demand urgent attention.
-This project represents a vital opportunity to lead a transformative effort in open-source security, with far-reaching implications for scientific research, education, and industry worldwide.
--->
-
+The $\spose$ stands at a critical juncture, facing unprecedented security challenges that demand urgent attention.
 The proposed initiative is a coordinated, ecosystem-wide effort to comprehensively address critical safety, security, and privacy vulnerabilities in the $\spose$.
-This ambitious undertaking demands not only technical expertise but also the ability to mobilize and unite a diverse community of developers, researchers, and institutions.
-
-<!--
-Our team is uniquely qualified to spearhead this crucial work:
--->
-
-**PI Millman**, as the executive director of UC Berkeley's Open Source Program Office, brings over two decades of experience in information security, scientific computing, and open-source.
-<!--
-He cofounded the Neuroimaging in Python project \citep{millman2007analysis} and was the NumPy and SciPy release manager from 2007 to 2009.
-He served on the SciPy steering committee from 2007 to 2010 and was an early contributor to scikit-learn.
-Millman cofounded NumFOCUS (a non-profit providing legal and administrative support for some ecosystem projects) \citep{numfcus} and served on its board from 2011 to 2015.
-He is the release manager of NetworkX, scikit-image, pygraphviz, numpydoc, and many other packages.
-With over a decade of experience in information security, Millman served on UC Berkeley's Campus Information Security and Privacy Committee from 2006 to 2010, providing oversight for campus-wide security policies and initiatives.
-As the former director of computing for UC Berkeley's Neuroscience Institute, he led efforts in designing secure computational infrastructure for sensitive research data.
-Millman has presented on various security topics at conferences, including cryptography, automated security policy implementation, and mandatory access controls.
-His expertise in computer security, combined with his extensive experience in scientific computing, uniquely positions him to address the critical security challenges facing the Scientific Python ecosystem.
--->
-His service on UC Berkeley's Campus Information Security and Privacy Committee, leadership in designing secure computational infrastructure for sensitive research data, and extensive contributions to the scientific Python ecosystem position him ideally to address the complex security challenges facing $\spose$.
-
-**Co-PI van der Walt**, a research scientist at the Berkeley Institute for Data Science, complements this expertise with his deep involvement in the ecosystem.
-His roles on the NumPy steering committee, as emeritus director of NumFOCUS, and as core contributor to numerous packages ensure a comprehensive understanding of the ecosystem's technical and social landscape.
-<!--
-He served on the NumFOCUS board from 2016 to 2023 and is the founder of scikit-image and co-author of Elegant SciPy.
-Van der Walt contributes to numerous packages in the ecosystem, including NumPy, SciPy, scikit-image, and NetworkX.
-He serves on the NumPy steering committee and co-chairs the PSF's Scientific Working Group.
--->
+This ambitious undertaking demands not only technical expertise but also the ability to mobilize and unite a broad coalition of developer communities spanning multiple scientific domains and industry sectors.
 \vspace{0.5em}
 \newline
-\indent Further, the PIs' track record with the $\spp$ demonstrates their capacity to foster collaboration, coordinate cross-project development, and drive meaningful change across the $\spose$.
-By leveraging their established networks and deep understanding of the ecosystem's complexities, they are well positioned to lead this transformative effort that will ensure a more secure and resilient foundation for scientific computing worldwide.
+\indent \textbf{PI Millman}, Executive Director of UC Berkeley's Open Source Program Office, brings 20+ years of leadership in open-source security and scientific computing.
+As cofounder of NumFOCUS \citep{numfocus} and former NumPy/SciPy release manager (2007–2009), he established governance models for foundational SPOSE projects.
+He was an early contributor to scikit-learn and cofounder of the Neuroimaging in Python (NIPY) project, advancing open and reproducible research in both machine learning and neuroimaging domains.
+His cybersecurity expertise stems from roles as UC Berkeley’s Neuroscience Institute Director of Computing (designing secure infrastructure for sensitive data) and service on the Campus Information Security and Privacy Committee (2006–2010).
+Millman is a maintainer and the release manager of NetworkX, scikit-image, pygraphviz, numpydoc, and many other packages.
+
+**Co-PI van der Walt**, Research Scientist at the Berkeley Institute for Data Science, combines deep technical knowledge with ecosystem-wide coordination.
+A founding developer of scikit-image and coauthor of *Elegant SciPy*, he serves on the NumPy Steering Committee and co-chairs the Python Software Foundation’s Scientific Working Group.
+His contributions span key $\spose$ projects including NumPy, SciPy, and NetworkX, with a focus on API design and community-driven governance.
+As NumFOCUS Emeritus Director, he bridges academic research and industrial adoption of $\spose$ tools.
+
+**Project Manager Whitaker**, Executive Director of the Berkeley Institute for Data Science, brings expertise in building welcoming and collaborative open-source communities.
+Founder of *The Turing Way*—a best-practices handbook for ethical, reproducible data science—she previously led AI governance initiatives at the Alan Turing Institute.
+Her work at BIDS focuses on interdisciplinary collaboration, aligning with this project’s need to harmonize security protocols across scientific domains.
+\vspace{0.5em}
+\newline
+\indent The team’s proven ability to coordinate cross-project development through the $\spp$ ensures robust execution of this initiative.
+By leveraging their technical authority, institutional partnerships, and community trust, they will establish a secure foundation for global scientific computing.
 
 <!--
 The success of this project will not only secure essential scientific infrastructure but also solidify $\spose$'s position at the forefront of open-source innovation and security.
