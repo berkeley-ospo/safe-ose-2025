@@ -259,10 +259,10 @@ The reliance on an over-worked volunteer developer community can lead to reduced
 The complexity and breadth of some core libraries, and how they are used in combination, makes it challenging for any single individual to have a comprehensive understanding of risks, potentially allowing subtle malicious changes to go unnoticed.
 These risks have been starkly highlighted by recent high-profile attacks, such as the XZ incident \citep{kaspersky2024xz, newman2024mystery}, a multi-year effort likely originating from a nation-state actor.
 
+\vspace{0.5em}
+\noindent\emph{Broader Impacts}
 
-## Broader Impacts of Mitigation {-}
-
-By addressing the above classes of vulnerabilities, we will not only secure the $\spose$, but will also set new standards for open-source security in scientific computing.
+\noindent By addressing the above classes of vulnerabilities, we will not only secure the $\spose$, but will also set new standards for open-source security in scientific computing.
 The broader impact of this work therefore extends beyond the immediate ecosystem, establishing best practices in open-source development, enhancing the reliability of scientific software worldwide, and ultimately contributing to more secure and trustworthy scientific advancements across all disciplines.
 
 # Development Plan
