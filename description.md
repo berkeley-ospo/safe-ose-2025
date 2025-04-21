@@ -439,34 +439,40 @@ The plan should include metrics for measuring success and any tools or benchmark
 Ideally, the evaluation plan will include testing/validation opportunities for existing users.
 -->
 
-To assess the efficacy of our work in enhancing the safety, security, and privacy of the $\spose$, we will implement a comprehensive evaluation strategy:
-
-## $\spec$ Process {-}
-
-The $\spec$ Process is designed to ensure community support for proposed security initiatives.
-The $\specsteering$ ensures community ownership of decision-making on $\spec$s, fostering broad acceptance across the ecosystem.
-Endorsement from $\spcore$ projects provides a clear indication of the acceptance and integration of our security initiatives within the core ecosystem.
-Project adoption demonstrates the reach and impact of our security measures beyond the core projects.
-The $\toolsteering$ ensures we are creating common resources that address needs according to community standards, procedures, and practices.
-We aim to have each $\spec$'s security measures adopted by three within its first year, and seven by the end of its second.
-Additionally, we aim to have each $\spec$ *endorsed* by two core projects within its first year, and five by the end of its second.
-These metrics provide a clear indicator of the reach and impact our security measures have across the $\spose$.
+To assess the efficacy of our work in enhancing the safety, security, and privacy of the $\spose$, we will implement a comprehensive evaluation and accountability strategy:
 
 ## $\spsecurity$ Oversight {-}
 
-We will establish a $\spsecurity$ by recruiting a diverse group of developers and maintainers from across the ecosystem to provide ongoing guidance and oversight of our security initiatives.
+We will establish a $\spsecurity$ by recruiting a diverse group of developers and maintainers from across the ecosystem to provide ongoing technical guidance and oversight of our security initiatives.
 This group will hold monthly meetings to evaluate progress, discuss challenges, and suggest directions to explore, ensuring that our efforts remain aligned with community needs and best practices.
 Based on what we learn in these meetings, we will develop sustainable strategies for the long-term implementation and maintenance of security measures beyond the grant period.
+
+In short, the $\spsecurity$ provides technical guidance through focused developer feedback, as well as long term contiguity for our efforts.
+
+## $\spec$ Process {-}
+
+The $\spec$ Process is designed to ensure community input in the writing of and support for the implementation of proposed security initiatives.
+The $\specsteering$ ensures community ownership of decision-making on $\spec$s, fostering broad acceptance across the ecosystem.
+Endorsement from $\spcore$ projects provides a clear indication of the acceptance of our security initiatives within the core ecosystem.
+Project adoption demonstrates the reach and impact of our security measures beyond the core projects.
+The $\toolsteering$ ensures we are creating common resources that address needs according to community standards, procedures, and practices.
+We aim to have each $\spec$'s security measures adopted by three projects within its first year, and seven projects by the end of its second.
+Additionally, we aim to have each $\spec$ *endorsed* by two core projects within its first year, and five by the end of its second.
+To make our efforts more visible, and to ensure broad endorsement of our SPECs, we will foster increased participation by various domain stacks in the SPEC process; their participation will be a clear signal that the work is gaining traction.
+
+In short, the SPEC process provides general community accountability and transparent insight into the reach and impact of our security measures across the $\spose$.
 
 ## External Advisory Board {-}
 
 We will form an external advisory board with representatives from diverse $\spose$ end-user organizations.
-This board will include members from domain-specific projects (e.g., IRIS-HEP and Vera Rubin Observatory), industry (e.g., Google and NVIDIA), national computing facilities (e.g., San Diego Supercomputer Center and TrustedCI), <!-- and funding agencies () --> and open-source foundations (e.g., PSF and OpenSSF), providing an authoratitive perspective on the impact of our mitigations and activities, rooted in day-to-day experience.
+This board will include members from domain-specific projects (e.g., IRIS-HEP and Vera Rubin Observatory), industry (e.g., Google and NVIDIA), national computing facilities (e.g., San Diego Supercomputer Center and TrustedCI), <!-- and funding agencies () --> and open-source foundations (e.g., PSF and OpenSSF), providing an authoratitive perspective on the impact of our work, rooted in day-to-day experience.
 
-We will conduct quarterly virtual meetings with this board to ensure that our work aligns with stakeholder needs and expectations, allowing for timely adjustments to our approach as necessary.
+We will conduct quarterly virtual meetings with this board to ensure that our work aligns with stakeholder needs and expectations, allowing for timely adjustments to be made to our approach.
 Through these interactions, we will collect and analyze feedback to measure the perceived value and real-world impact of our implemented security measures.
 
-# Conclusion  
+In short, the External Advisory Board provides high-level strategic feedback on our work.
+
+# Conclusion
 
 <!--
 6. Provide information to substantiate compliance with the eligibility requirements (See Section IV above). ?? What to do?
