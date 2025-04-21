@@ -1,9 +1,9 @@
 \noindent \textbf{Overview}
 
 \noindent This project aims to address critical safety, security, and privacy vulnerabilities in the Scientific Python Open Source Ecosystem ($\spose$), a cornerstone of modern scientific computing, data analysis, and machine learning.
-The $\spose$ enables cutting-edge research across disciplines and is crucial for national security, economic growth, and education.
+The $\spose$ enables cutting-edge research across disciplines and is crucial for education, economic growth, and national security.
 We will leverage the Scientific Python Ecosystem Coordination ($\spec$) process to develop and disseminate ecosystem-wide security standards and best practices.
-Our comprehensive approach addresses supply chain attacks, enhances access controls, and mitigates insider threats through community-supported initiatives and technical improvements. \
+Our comprehensive approach addresses supply chain attacks, enhances access controls, and mitigates insider threats through community-supported initiatives and tooling. \
 
 \noindent \textbf{Intellectual Merit}
 
