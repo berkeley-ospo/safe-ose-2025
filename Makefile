@@ -25,11 +25,11 @@ grant: $(BUILDDIR) $(TEX) $(FIGURES)
 
 split: grant
 	pdftk grant.pdf cat 2 output summary.pdf
-	pdftk grant.pdf cat 3-15 output description.pdf
-	pdftk grant.pdf cat 16-23 output references.pdf
-	pdftk grant.pdf cat 24-25 output data.pdf
-	pdftk grant.pdf cat 25 output facilities.pdf
-	pdftk grant.pdf cat 26 output personnel.pdf
+	pdftk grant.pdf cat 3-17 output description.pdf
+	pdftk grant.pdf cat 18-25 output references.pdf
+	pdftk grant.pdf cat 26-27 output data.pdf
+	pdftk grant.pdf cat 28 output facilities.pdf
+	pdftk grant.pdf cat 29 output personnel.pdf
 
 clean: $(BUILDDIR)
 	rm -rf $(BUILDDIR)
