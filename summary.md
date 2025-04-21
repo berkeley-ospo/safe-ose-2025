@@ -21,7 +21,7 @@ The project will strengthen national security by protecting critical infrastruct
 It will contribute to economic growth and innovation by securing the foundation of many data science and machine learning applications used in industry.
 By involving the community in the development of security measures, we will foster a culture of security awareness among open-source contributors and users.
 The project will set new standards for open-source security, benefiting not only the scientific Python ecosystem but also serving as a model for other open-source communities.
-Crucially, this work will safeguard the reputation of the $\spose$ as a premier platform for scientific computing and data analysis, ensuring its continued leadership and trust within the global research community.
+Crucially, this work will safeguard the reputation of the $\spose$ as the de facto platform for scientific computing and data analysis, ensuring the continued vitality and resilience of this essential global research infrastructure.
 By proactively addressing security threats, we will preserve the ecosystem’s role as a catalyst for innovation and a trusted foundation for scientific and technological advancement.
 
 \vfill
