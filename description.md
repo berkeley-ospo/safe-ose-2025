@@ -17,7 +17,7 @@ The $\spose$ brings together people from around the world who work together to s
 It employs a decentralized governance structure, with individual projects retaining autonomy over their leadership, decision-making, and development processes.
 This community-driven approach allows for rapid innovation while seeking community consensus around ecosystem-wide decisions and standards.
 
-Consider a physicist studying particle collisions at the Large Hadron Collider (LHC) to investigate questions about the interactions of matter and the fundamental forces of Nature and search for evidence of new physics.
+Consider, for example, a physicist studying particle collisions at the Large Hadron Collider (LHC) to investigate questions about the interactions of matter and the fundamental forces of Nature and search for evidence of new physics.
 They might use a deployment of the Institute for Research and Innovation in Software for High Energy Physics \citep{Bockelman:2023gbj} (IRIS-HEP)'s Elastic Analysis Facility---a cloud-based platform that provides shared computing environments for high energy physics (HEP) researchers to process and analyze massive datasets, share code and results, and collaborate with colleagues globally.
 Then, to analyze collision data, the physicist might rely on tools from Scikit-HEP (see Figure \ref{fig:scikit-hep}), a $\spose$ sub-ecosystem specifically designed for Pythonic high energy physics analysis \citep{Rodrigues:2020syo}.
 Scikit-HEP intentionally builds on a \emph{stack} of packages, including foundational scientific Python libraries like NumPy for numerical computing \citep{vanderwalt2011numpy, harris2020array}, SciPy for general scientific computing algorithms \citep{virtanen2020scipy}, Matplotlib for data visualization \citep{hunter2007matplotlib}, and Pandas for data manipulation \citep{mckinney-proc-scipy-2010}.
@@ -31,17 +31,18 @@ Successively more HEP specific operations additionally use Uproot for I/O with t
   \end{center}
   \caption{The components of the Python-based analysis ecosystem for HEP that form the Scikit-HEP domain stack.
   The bottom ring consists of the foundational computational libraries in the Scientific Python ecosystem.
-  The successive rings contain tools that are more specifically designed for particle physics analysis and applications; while the first HEP-specific layer is broadly used across the field of particle physics, each layer becomes more operation- or experiment-specific.
-  Collectively, the Scientific Python ecosystem and the Scikit-HEP domain stack enable the next generation of LHC analysis infrastructure developed by IRIS-HEP \citep{Bockelman:2023gbj}.}
+  The successive rings contain tools that are more specifically designed for particle physics analysis and applications; while the first HEP-specific layer is broadly used across the field of particle physics, each layer becomes more operation- or experiment-specific.}
   \label{fig:scikit-hep}
 \end{figure}
 
-This example illustrates the concept of a \emph{domain stack} in the scientific Python ecosystem, where libraries are built in layers, with foundational packages at the bottom and more specialized, domain-specific packages at the top.
-The foundational libraries provide basic functionality needed across many domains, while the upper-level packages build upon these foundational libraries to provide domain specific tooling to address the specific needs of researchers working in particular fields.
-There are many such domain stacks like Scikit-HEP, including Astropy (astronomy), NIPY (neuroimaging), PySAL (geospatial data science), scverse (single-cell biology), and Biopython (bioinformatics).
-Inside a domain stack, each package typically has its own developer community, communication channels, websites, road maps, documentation, engineering and packaging solutions, and governance structures.
-While this loosely coupled development model has some advantages, it also means that there are redundancies due to inherent fragmentation in the scientific Python ecosystem.
-This fragmentation poses significant challenges in terms of sustainability, direction, compatibility, user experience, collaboration, efficiency, performance, and deployment.
+This example demonstrates the concept of a \emph{domain stack} in the $\spose$, where libraries are organized in layers, with foundational packages at the base and increasingly specialized, domain-specific packages built on top.
+The foundational libraries provide essential functionality needed across many scientific domains, while upper-level packages extend this foundation to address the specific needs of researchers in particular fields.
+While the previous example focused on a physicist using the Scikit-HEP stack, a similar structure is found in other areas of science and engineering supported by the NSF.
+For instance, a geographer or urban scientist working with spatial data might rely on the PySAL ecosystem, which builds on foundational libraries such as NumPy, SciPy, and Pandas, and then adds specialized packages for spatial analysis, geostatistics, and visualization tailored to geographic research.
+There are many such domain stacks in the $\spose$, including Astropy (astronomy), NIPY (neuroimaging), scverse (single-cell biology), and Biopython (bioinformatics), each layering domain-specific capabilities atop shared core libraries.
+Within a domain stack, each package typically has its own developer community, communication channels, website, roadmap, documentation, engineering and packaging solutions, and governance structure.
+While this loosely coupled development model offers flexibility and fosters innovation, it also leads to redundancies and fragmentation across the $\spose$.
+Such fragmentation poses significant challenges for sustainability, strategic direction, compatibility, user experience, collaboration, efficiency, performance, and deployment.
 
 ## Scientific Python Project (\spp) {-}
 
@@ -65,11 +66,6 @@ Membership is open to all, established through active collaboration, and require
 Decisions are made through community discussions on public forums following a consensus-seeking approach, with sensitive topics (e.g., security issues and conduct violations) addressed privately when necessary.
 
 We created the **Scientific Python Ecosystem Coordination ($\spec$)** process \citep{specs} to establish cross-project technical specifications, highlight shared resources, and document best practices (see Figure \ref{fig:specs}).
-<!--
-We formed a **$\specsteering$** and engaged an initial set of 
-**$\spcore$**.
-(IPython \citep{perez2007ipython}, NumPy, SciPy, Matplotlib \citep{hunter2007matplotlib}, Pandas \citep{mckinney-proc-scipy-2010}, NetworkX \citep{hagberg2008}, scikit-image \citep{vanderwalt2014scikit}, scikit-learn \citep{scikit-learn}, xarray \citep{hoyer2017xarray}, and zarr).
--->
 The $\specsteering$, comprising 17 volunteers from various projects in the ecosystem, oversees the $\spec$ process with input from the larger community and in consultation with the maintainers of the $\spcore$.
 
 \begin{figure}
@@ -170,26 +166,6 @@ biology \citep{noorbakhsh2019pan},
 neuroscience \citep{burt2018hierarchy},
 epidemiology \citep{hughes2014geovisualization}
 and many others.
-
-<!--
-The ecosystem enables cutting-edge research across numerous scientific domains, including **Physics and Astronomy** (Event Horizon Telescope, LIGO, Rubin Observatory), **Climate Science** (MetPy, Pangeo, CMIP6),  and **Neuroscience** (Human Connectome Project, Allen Brain Atlas).
-
-The ecosystem enables cutting-edge research 
-
-from large international collaborations such as CERN
-to key national resources such as James Webb Telescope ...
-to individual research projects from systems biology to materials science.
-
-Spans the entire gamut of scientific research from ....
-larger international collaborations (CERN), 
-NASA (..),
-national labs,
-universities and research centers,
-to indvidual labs.
-
-- multiple fields / disciplines
-- small labs to international collaborations
--->
 
 ## Education and Workforce Development {-}
 
