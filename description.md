@@ -420,7 +420,7 @@ The resulting improvements will help safeguard national security and critical in
 This work will also foster best practices in open-source development and vulnerability management, serving as a model for other software communities and contributing to improved economic competitiveness, resilience, and technological leadership for the United States.
 
 Increased partnerships between academia, industry, government, and non-profit organizations will be facilitated through the collaborative nature of the project, promoting knowledge transfer and shared responsibility for open-source security.
-Ultimately, this initiative will not only secure the $\spose$, but will also contribute to a more robust and inclusive infrastructure for research and education, enabling trustworthy scientific and technological advancements that benefit society as a whole.
+Ultimately, this initiative will not only secure the $\spose$, but will also contribute to a more robust, vibrant infrastructure for research and education, enabling trustworthy scientific and technological advancements that benefit society as a whole.
 
 # Evaluation Plan
 
@@ -468,9 +468,13 @@ In short, the External Advisory Board provides high-level strategic feedback on 
 <!--
 6. Provide information to substantiate compliance with the eligibility requirements (See Section IV above). ?? What to do?
 -->
-The $\spose$ stands at a critical juncture, facing unprecedented security challenges that demand urgent attention.
+The $\spose$ stands at a critical juncture: as core infrastructure of national importance, it faces unprecedented security challenges that demand urgent attention.
 The proposed initiative is a coordinated, ecosystem-wide effort to comprehensively address critical safety, security, and privacy vulnerabilities in the $\spose$.
-This ambitious undertaking demands not only technical expertise but also the ability to mobilize and unite a broad coalition of developer communities spanning multiple scientific domains and industry sectors.
+This ambitious undertaking demands not only technical expertise but also the ability to mobilize and unite a broad coalition of developer communities, spanning multiple scientific domains and industry sectors.
+So, while the work that needs to be done is challenging, it is of vital importance:
+it will strengthen the reliability and security of foundational scientific software, safeguarding national infrastructure and advancing best practices in open-source development, while fostering collaboration across academia, industry, government, and non-profits.
+Ultimately, these efforts will create a more resilient computational foundation for research, education, and innovation.
+
 \vspace{0.5em}
 \newline
 \indent \textbf{PI Millman}, Executive Director of UC Berkeley's Open Source Program Office, brings 20+ years of leadership in open-source security and scientific computing.
