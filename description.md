@@ -237,33 +237,34 @@ https://spectralops.io/blog/5-types-of-software-supply-chain-attacks-developers-
 https://www.splunk.com/en_us/blog/learn/supply-chain-attacks.html
 -->
 
-Despite its crucial role, the $\spose$ faces several critical classes of vulnerabilities that, if exploited, could have profound consequences for scientific integrity, national security, and industry.
-While we have identified these vulnerabilities separately for clarity, it is important to recognize that, in real-world attacks, they are often exploited in combination, creating complex and multifaceted threats.
-This interconnected nature of security risks underscores the need for a holistic approach to safeguarding the $\spose$, one that addresses all vulnerabilities simultaneously---a task that requires substantial work beyond what volunteer efforts alone can achieve.
+The $\spose$ faces several critical classes of vulnerabilities that, if exploited, could have profound consequences for scientific integrity, national security, and industry.
+While we describe these vulnerabilities separately for clarity, it is important to recognize that, in real-world attacks, they are often exploited in combination, creating complex and multifaceted threats.
+This interconnected nature of security risks underscores the need for a holistic approach to safeguarding the $\spose$, one that addresses all classes of vulnerabilities simultaneously---a task that requires substantial work beyond what volunteer efforts alone can achieve.
+Below, we describe each class of vulnerability, and emphasize specific weaknesses and exploits we'd like to mitigate.
 
 ## Supply Chain Vulnerability (SCV)
 
 The $\spose$, as an extensive network of independent, interconnected libraries, is particularly susceptible to supply chain attacks.
 An attacker who successfully compromises a widely used dependency can insert malicious code that propagates throughout the ecosystem, impacting a vast array of downstream projects and users.
-These risks have been clearly illustrated by the recent Ultralytics supply-chain attack, which demonstrated the potential for widespread impact through compromised dependencies \citep{pypi2024ultralytics}.
+This risk is highlighted by the recent Ultralytics supply-chain attack, which demonstrates the potential for widespread impact through compromised dependencies \citep{pypi2024ultralytics}.
 
 ### (SCV1) Insufficient Code Signing Practices {-}
 
-Many scientific Python projects lack cryptographic signing for software releases, exposing the ecosystem to dependency tampering and unauthorized modifications.
+Many scientific Python projects lack cryptographic signing of software releases, exposing the ecosystem to dependency tampering and unauthorized modifications.
 Attackers exploit this gap to inject malicious code through methods like typosquatting or compromising outdated packages, as demonstrated by recent supply-chain incidents.
-We will develop community standards to implement cryptographic verification across dependencies, including tools for seamless integration into development workflows.
+We will develop community standards to implement cryptographic verification across dependencies, and provide tools to integrate it seamlessly into development workflows.
 By ensuring package authenticity, this work will strengthen trust in scientific software critical to national research infrastructure and the global economy.
 
 ### (SCV2) Fragmented Vulnerability Tracking {-}
 
 The $\spose$ lacks coordinated vulnerability tracking, allowing attackers to exploit outdated transitive dependencies in projects like geospatial models or medical imaging pipelines.
-This gap enables attacks where malicious code persists in dependency chains for months, as seen in the 2024 Ultralytics breach where nested vulnerabilities remained unpatched in 60% of downstream projects.
-We will establish ecosystem-wide protocols for vulnerability disclosure and automated dependency graph analysis to prioritize critical fixes.
-By closing this gap, we will protect sensitive research workflows in national laboratories and hospitals while enabling safer collaboration across global open-source teams.
+This gap enables attacks where malicious code persists in dependency chains for months or years, as seen in the 2024 Ultralytics breach where known vulnerabilities remained unpatched in 60% of downstream projects.
+We will establish ecosystem-wide protocols for vulnerability disclosure and, through automated dependency graph analysis, prioritize critical fixes.
+By closing this gap, we will protect sensitive research workflows in national laboratories and hospitals alike, while enabling safer collaboration across global open-source teams.
 
 ## Access Controls Vulnerability (ACV)
 
-Attackers increasingly target open-source software projects through credential hijacking, where maintainer accounts are compromised through phishing attacks or password reuse, enabling malicious actors to commit code that appears legitimate.
+Attackers increasingly target open-source software projects using credential hijacking, where maintainer accounts are compromised through phishing attacks or password reuse, enabling malicious actors to commit code that appears legitimate.
 A compromised account with broad access could be used to insert malicious code into core libraries, affecting countless downstream projects and users across scientific domains, government research, and industry applications.
 
 ### (ACV1) Poor Authentication Requirements and Auditing {-}
@@ -275,31 +276,31 @@ Strengthening these controls will protect sensitive data in healthcare and natio
 
 ### (ACV2) Coarse-grained Access Control {-}
 
-The $\spose$ relies on overly broad permission models that grant excessive privileges to contributors, creating opportunities for accidental or malicious code modifications.
-Additionally, overprivileged automation tokens with broad write access further increase the risk of backdoor injection during automated builds and deployments.
-Attackers exploit this lack of granular access controls to insert vulnerabilities through compromised accounts or overprivileged automation tools.
-We will collaborate with the community to implement and adopt role-based access controls, ensuring contributors have only the permissions necessary for their specific tasks.
+The $\spose$ relies on coarse-grained permission models that grant excessive privileges to contributors, creating opportunities for accidental or malicious code modifications.
+Further, overprivileged automation tokens with broad write access increase the risk of backdoor injection during automated builds and deployments.
+We will collaborate with the community to implement and adopt role-based access controls, ensuring that contributors only have the permissions necessary to perform their allocated tasks.
 By reducing overprivileged access, this work will safeguard sensitive research data while maintaining the collaborative ethos of open-source development.
 
 ### (ACV3) Stale Maintainer Permissions {-}
 
-A significant vulnerability in the $\spose$ arises when maintainers retain access rights long after they have ceased active contribution, resulting in dormant accounts that expand the project's attack surface.
+A significant vulnerability arises in the $\spose$ when maintainers retain access rights long after they have ceased active contribution, resulting in dormant accounts that expand the project's attack surface.
 Attackers can exploit these inactive or unmonitored accounts to gain unauthorized entry and introduce malicious changes.
 We will establish protocols for regular review and revocation of inactive contributor permissions, ensuring that only actively engaged and verified maintainers retain elevated access.
 By reducing the number of stale or unnecessary privileged accounts, this work will significantly decrease the risk of account takeovers and unauthorized code changes, thereby strengthening the overall security and trustworthiness of the $\spose$.
 
 ## Insider Attacks Vulnerability (IAV)
 
-Social engineering attacks are increasingly targeting maintainers experiencing burnout, with malicious actors exploiting fatigue and reduced vigilance to bypass normal code review processes and introduce subtle backdoors.
+Social engineering attacks increasingly target maintainers experiencing burnout.
+Malicious actors exploit reduced vigilance due to fatigue and offer much needed "assistance", bypassing standard code review processes and introducing subtle backdoors.
 The ecosystem's approach, which encourages contributions from a global community of (mostly self-selecting) volunteers, expands the potential attack surface.
 This risk is compounded by a maintainer onboarding model that elevates privileges to active contributors without comprehensive background checks or identity verification.
 In this environment, sleeper agents—long-term contributors who gradually introduce vulnerabilities over time—pose a particularly insidious threat.
-These vulnerabilities have been starkly highlighted by recent high-profile attacks, such as the XZ Utils incident \citep{kaspersky2024xz, newman2024mystery}, a multi-year effort likely originating from a nation-state actor that underscores the community's vulnerability to sophisticated, patient attackers willing to establish long-term presence before executing their attacks.
+These vulnerabilities have been starkly highlighted by recent high-profile attacks, such as the XZ Utils incident \citep{kaspersky2024xz, newman2024mystery}, a multi-year effort---likely originating from a nation-state actor---that underscores the community's vulnerability to sophisticated, patient attackers willing to establish long-term presence before executing their attacks.
 
 ### (IAV1) Poor Contributor Vetting {-}
 
-The $\spose$’s open contribution model lacks systematic vetting of new contributors, enabling attackers to gradually introduce vulnerabilities as trusted participants over months or years.
-This socio-technical vulnerability allows sleeper agents and socially engineered actors to bypass code review processes.
+The $\spose$’s open contribution model lacks systematic vetting of contributors, enabling attackers to gradually introduce vulnerabilities as trusted participants over months or years.
+This socio-technical vulnerability allows sleeper agents and those who socially engineered accounts to bypass code review processes.
 We will develop a reputation system analyzing contributors’ ecosystem-wide activity to identify anomalous behavior while preserving the openness essential to collaborative development.
 By mitigating insider threats, this work will protect sensitive data in healthcare and national security applications while maintaining an open contribution model.
 
@@ -312,7 +313,7 @@ Such a system would provide a more nuanced view of a contributor's history and r
 ### (IAV2) Review Complexity and Overload {-}
 
 The scale and interdependence of core libraries make it difficult for maintainers to fully assess risks, enabling attackers to hide malicious changes in complex codebases.
-Moreover, maintainers of widely used libraries often face overwhelming review workloads, creating opportunities for attackers to insert subtle malicious code through fatigued or rushed inspections.
+Moreover, maintainers of widely used libraries often face overwhelming review workloads, creating opportunities for attackers to insert subtle, malicious code which passes unnoticed through rushed, fatigued inspections.
 We will develop automated systems to analyze contribution patterns and flag anomalies in code submissions, prioritizing high-risk changes for expert scrutiny.
 By augmenting human oversight with scalable screening tools, we will safeguard critical infrastructure in academic research and industrial systems while maintaining the open collaboration vital to scientific progress.
 
