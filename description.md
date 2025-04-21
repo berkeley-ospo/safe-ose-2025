@@ -113,17 +113,18 @@ https://www.irregex.vc/posts/a-look-into-the-most-starred-repos
 While GitHub stars are not a definitive measure of impact, it is notable that nine of the SPEC Core Projects rank among the top 0.036% of all repositories on GitHub by stars \citep{gitstar_ranking}.
 The maintainers of each of the $\spcore$ has agreed to become involved with the $\spec$ process; however, many more projects small and large participate and even more adopt the various $\spec$s for their own projects.
 
-In addition to these projects, we also develop and maintain of a growing collection of **$\sptools$**---overseen by a $\toolsteering$---that help projects across the ecosystem, including those supporting the $\spec$s.
-<!--
-$\spp$ supports on the order of fifteen tools, ranging from release management to community organization, and two services: a discussion forum and web analytics.
--->
-The growing list of developer tools includes
+In addition to these projects, we also develop and maintain a growing collection of **$\sptools$**---overseen by the $\toolsteering$ committee---that support projects across the ecosystem, including those implementing the $\spec$s.
+The $\spp$ currently supports approximately fifteen tools, ranging from release management utilities to community organization aids, as well as two core services: a discussion forum and web analytics.
+The expanding suite of developer tools includes:
+
 \begin{itemize}
-\item \textbf{cookie} (334 GH stars, 56 GH forks) \citep{scientific_python_cookie_github}, a template generator for new Python projects based on the Scientific Python Developer Guide. It ensures that new repositories adhere to best practices in development, testing, and deployment.
-\item \textbf{repo-review} (72 GH stars, 6 GH forks) \citep{repo_review_github}, a framework for evaluating repositories against predefined guidelines from the Scientific Python Developer Guide. By identifying configuration issues and enforcing compliance with best practices, it helps maintain high standards across the ecosystem.
-\item \textbf{lazy-loader} (163 GH stars, 22 GH forks) \citep{lazy_loader_github}, a library that implements lazy loading for Python submodules and functions, reducing import times and memory usage by loading components only when accessed.
+\item \textbf{cookie} (339 GH stars, 56 GH forks) \citep{scientific_python_cookie_github}, a template generator for new Python projects based on the Scientific Python Developer Guide. It ensures that new repositories adhere to best practices in development, testing, and deployment.
+\item \textbf{repo-review} (74 GH stars, 6 GH forks) \citep{repo_review_github}, a framework for evaluating repositories against predefined guidelines from the Scientific Python Developer Guide. By identifying configuration issues and enforcing compliance with best practices, it helps maintain high standards across the ecosystem.
+\item \textbf{lazy-loader} (165 GH stars, 22 GH forks) \citep{lazy_loader_github}, a library that implements lazy loading for Python submodules and functions, reducing import times and memory usage by loading components only when accessed.
+\item \textbf{MeeseeksDev} (36 GH stars, 22 GH forks) \citep{meeseeksdev_github}, a GitHub bot that automates routine project management tasks such as labeling issues, merging pull requests, backporting security fixes, and enforcing repository policies, thereby streamlining contributor workflows.
 \item \textbf{pytest-doctestplus} (104 GH stars, 40 GH forks) \citep{pytest_doctestplus_github}, a plugin for the pytest framework that extends doctest capabilities to support advanced testing of documentation files.
 \item \textbf{spin} (109 GH stars, 21 GH forks) \citep{spin_github}, a developer tool designed to simplify common build and development tasks for scientific Python libraries. It abstracts complex command-line operations into user-friendly commands, reducing human error and ensuring consistent workflows across projects.
+\item \textbf{sync-teams-action} (4 GH stars, 2 GH forks) \citep{sync_teams_action_github}, a GitHub Action for managing teams and team membership within GitHub organizations, helping to automate and standardize access control.
 \end{itemize}
 
 Through these and other community initiatives, the $\spp$ fosters interoperability, reduces maintenance burden, and provides a more cohesive experience for users.
