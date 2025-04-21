@@ -325,14 +325,14 @@ The plan should include key milestones with separate subsections pertaining to t
 For software-focused OSEs, describe, as appropriate, any important technical considerations such as the use of memory-safe languages and/or software bills of materials.
 -->
 
-To address critical vulnerabilities and significantly enhance the safety, security, and privacy of the $\spose$, we will leverage the $\spec$ process.
-In collaboration with the $\spcommunity$, we will develop and refine ecosystem-wide security standards and best practices, building on and improving existing efforts as needed.
-Where necessary, we will also develop tools and services to help the community implement security $\spec$s effectively, with careful attention to technical considerations such as the adoption of memory-safe languages and the generation of software bills of materials (SBOMs).
+To address critical vulnerabilities and significantly improve the safety, security, and privacy of the $\spose$, we will leverage the $\spec$ process.
+In collaboration with the $\spcommunity$ we will develop, and iteratively refine, ecosystem-wide security standards and best practices, building on and improving existing efforts as needed.
+Where necessary, we will also develop tools and services to help the community implement security $\spec$s effectively, paying careful attention to technical considerations such as the adoption of memory-safe languages and the generation of software bills of materials (SBOMs).
 
 ## Year 1 Milestones
 
-In the first year, our focus will be on SPEC-driven standardization, tool prototyping, and targeted deployment.
-First, we will operationalize two existing security SPECs through tooling development and targeted pilot deployments:
+In the first year, our focus will be on SPEC-driven standardization, tool prototyping, and targeted deployment of security standards and best practices.
+We will start by operationalizing two existing security SPECs:
 
 - SPEC 6 — Keys to the Castle \citep{spec6}, which provides principles and practical guidance for documenting, distributing, and managing access to restricted project resources and secrets, including privilege minimization, regular permission review, secure password storage, and the use of multi-factor authentication.
 
@@ -360,25 +360,26 @@ This system will prioritize transitive risks in projects using C/C++ extensions.
 
 ### Access Control Vulnerability Mitigation Year 1 Milestones {-}
 
-- **ACV1---MFA Enforcement.** Implement multi-factor authentication requirements for 100% of SPEC Core Project owners.
+- **ACV1---MFA Adoption.** Implement multi-factor authentication requirements for all SPEC Core Project repository owners.
 This milestone codifies SPEC 6’s recommendation for two-factor authentication.
 - **ACV2---Role-based Access Control.** Deploy role-based access control (RBAC) prototypes in NetworkX and scikit-image, limiting CI/CD tokens to designated workflow files.
 This work operationalizes SPEC 6’s privilege minimization guidance and will serve as a model for broader RBAC adoption.
-- **ACV3---Access Audits.** Develop automated access audit systems using OpenID Connect (OIDC), with protocols to revoke permissions after six months of inactivity.
-This milestone automates SPEC 6’s recommendation for regular review of permissions, reducing the risk from inactive accounts.
+- **ACV3---Access Audits.** Develop automated access audit systems, with protocols to revoke permissions after six months of inactivity.
+This milestone automates SPEC 6’s recommendation to regularly review  permissions, reducing exposure from inactive accounts.
 
 ### Insider Attack Vulnerability Mitigation Year 1 Milestones {-}
 
 - **IAV1---Reputation System.**
-We will research existing reputation systems and tools, and engage the community through the SPEC process to define requirements and use cases for a contributor reputation system (e.g., assessing developer expertise or collaboration networks).
-We will then prototype a reputation system that analyzes over five years of contributor activity across ten core projects.
+We will research existing reputation systems and tools, and engage the community through the SPEC process to define requirements and use cases for a contributor reputation system.
+This system will, e.g., assess developer expertise, examine networks of collaboration, and incorporate a web of trust.
+We will then prototype the system, analyzing more than five years of contributor activity across ten core projects.
 - **IAV2---Anomaly Detection.**
 We will review existing approaches and tools for anomaly detection, and work with the community through the SPEC process to clarify needs and desired features.
-Alpha versions of anomaly detection tools for code review will be released, with a focus on C, C++, and Cython codebases that use unsafe memory operations.
+Alpha versions, or configurations, of anomaly detection tools, that can also act as code review agents, will be released, with a focus on C, C++, and Cython codebases that use unsafe memory operations.
 
 ## Year 2 Milestones
 
-For the second year, we will focus on scaling and integrating the tools, standards, and processes developed in Year 1 to achieve widespread adoption across the ecosystem.
+For the second year, we will focus on scaling and better integration of the tools, standards, and processes developed in Year 1 to achieve widespread adoption across the ecosystem.
 Our efforts will emphasize robust implementation of cryptographic signing, SBOM validation, automated vulnerability management, and advanced access controls in a broader set of projects.
 We will also refine and deploy reputation and anomaly detection systems at scale, ensuring that security best practices are embedded throughout the $\spose$.
 By targeting both core and domain-specific projects, we aim to establish sustainable, community-driven security practices that can be maintained and evolved beyond the award period.
@@ -386,7 +387,7 @@ By targeting both core and domain-specific projects, we aim to establish sustain
 ### Implementation Framework Year 2 Milestones {-}
 
 - **Security Summit.** Host the Second Scientific Python Security Summit, focusing on domain-specific stacks (bioinformatics, geospatial) to drive adoption.
-- **Public Dashboard.** Expand the public dashboard to include ... and dependency chain risk scores.
+- **Public Dashboard.** Expand the public dashboard to include Critical Vulnerability & Exposure (CVE) tracking and provide dependency chain risk scores.
 
 ### Supply Chain Vulnerability Mitigation Year 2 Milestones {-}
 
@@ -398,7 +399,7 @@ Automate CVE patch recommendations for nested dependencies in projects using leg
 
 ### Access Control Vulnerability Mitigation Year 2 Milestones {-}
 
-- **ACV1---MFA Enforcement.** Extend MFA enforcement to 100% of contributors with write access in the top 20 $\spose$ projects.
+- **ACV1---MFA Adoption.** Extend MFA adoption to all contributors with write access in the top 20 $\spose$ projects.
 - **ACV2---Role-based Access Control.** Scale RBAC implementation to 10 projects, including those with GPU or CUDA kernels requiring heightened privilege controls.
 - **ACV3---Access Audits.** Implement quarterly automated access audits for all projects with more than 10 contributors, with the goal of reducing stale permissions by 70%.
 
@@ -409,7 +410,7 @@ We will further develop and deploy the contributor reputation system across the 
 - **IAV2---Anomaly Detection.**
 We will refine and integrate anomaly detection tools into CI/CD workflows for projects utilizing unsafe memory operations, with the goal of reducing code review workloads.
 These tools will be deployed as automated checks for maintainers of high-risk packages, such as those handling cryptography or parallel computing.
-We will train machine learning models on historical $\spose$ pull requests to flag suspicious patterns, such as obfuscated code or unexpected use of subprocesses.
+We will explore partnering with companies to train machine learning models for flagging suspicious patterns, such as obfuscated code or unexpected use of subprocesses, based on historical $\spose$ pull requests.
 
 <!--
 The Project Description also must contain, as a separate section within the narrative, a section labeled “Broader Impacts”. This section should provide a discussion of the broader impacts of the proposed activities. Broader impacts may be accomplished through the research itself, through the activities that are directly related to specific research projects, or through activities that are supported by, but are complementary to the project. NSF values the advancement of scientific knowledge and activities that contribute to the achievement of societally relevant outcomes. Such outcomes include, but are not limited to: full participation of women, persons with disabilities, and underrepresented minorities in science, technology, engineering, and mathematics (STEM); improved STEM education and educator development at any level; increased public scientific literacy and public engagement with science and technology; improved well-being of individuals in society; development of a diverse, globally competitive STEM workforce; increased partnerships between academia, industry, and others; improved national security; increased economic competitiveness of the U.S.; use of science and technology to inform public policy; and enhanced infrastructure for research and education. These examples of societally relevant outcomes should not be considered either comprehensive or prescriptive. Proposers may include appropriate outcomes not covered by these examples.
