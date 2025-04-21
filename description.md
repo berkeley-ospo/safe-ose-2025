@@ -56,7 +56,7 @@ This fragmentation poses significant challenges in terms of sustainability, dire
 To address these challenges, the PIs founded the **Scientific Python Project ($\spp$)** \citep{spp}, the managing organization that steers the development of the $\spose$, and the essential infrastructure needed to keep the ecosystem running (see Figure \ref{fig:scientific-python.org}).
 $\spp$'s mission is to better coordinate the $\spose$ and support its community of contributors and maintainers.
 Through the $\spp$, the PIs recruited a governing team of community leaders and managers, established central community spaces, brought developers together for cross-project Developer Summits, updated and maintained classic community-owned learning resources, aggregated and disseminated best development practices, and built and supported common maintainer tooling.
-$\spp$ has grown rapidly, with 80 team members and 345 followers for our GitHub organization, 29 affiliated Python libraries in our nightly wheel-hosting infrastructure, 331 subscribers to our YouTube channel, 471 members on our Discourse forum, and 689 members on our Discord server.
+$\spp$ has grown rapidly, with 80 team members and 356 followers for our GitHub organization, 29 affiliated Python libraries in our nightly wheel-hosting infrastructure, 332 subscribers to our YouTube channel, 477 members on our Discourse forum, and 694 members on our Discord server.
 We are holding our third annual Scientific Python Developer Summit this May.
 
 All software is licensed under the modified BSD-3 license and educational material under Creative Commons licenses like CC0 or CC-BY.
