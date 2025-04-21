@@ -146,8 +146,8 @@ For example, in high energy physics, the ATLAS and CMS LHC experiments rely on s
 The Belle II experiment utilizes Scikit-HEP's vector and particle packages for precision measurements of CP violation in B-meson decays, critical for testing the Standard Model \citep{belle2_core_software}.
 KM3NeT, the deep-sea neutrino telescope in the Mediterranean, employs Scikit-HEP tools for data analysis, simulation, and software development \citep{indico_cern_seminar_2020, hennig2023km3net}.
 Similarly, the LHCb Collaboration recently performed its first analysis entirely in Python, leveraging standard scientific Python packages alongside Scikit-HEP tools such as boost-histogram, iminuit, Particle, and uproot \citep{lhcb2022prompt}.
-The Scikit-HEP statistical modeling library pyhf \citep{pyhf_joss} has been used and cited by collaborations in experimental collider physics (ATLAS), neutrino physics (MicroBooNE), flavour physics (Belle II), the phenomenology community (SModels, MadAnalysis5), and in studies for future colliders (Future Circular Collider, Electron-Ion Collider, Muon Collider).
 <!--
+The Scikit-HEP statistical modeling library pyhf \citep{pyhf_joss} has been used and cited by collaborations in experimental collider physics (ATLAS), neutrino physics (MicroBooNE), flavour physics (Belle II), the phenomenology community (SModels, MadAnalysis5), and in studies for future colliders (Future Circular Collider, Electron-Ion Collider, Muon Collider).
 These examples highlight the power of Python-based workflows for managing large-scale high energy physics datasets efficiently, marking a transition toward modern, flexible, and reproducible computational methodologies.
 -->
 
@@ -385,7 +385,7 @@ Integrate with existing dependency tracking tools to ensure comprehensive vulner
 Use the \texttt{meeseeksdev} backport bot to ensure that critical patches for updating dependencies are applied to patch releases.
 Automate CVE patch recommendations for nested dependencies in projects using legacy C or Fortran code.
 
-\vspace{0.7em}
+\newpage
 \noindent\emph{Access Control Vulnerability Mitigation Year 2 Milestones}
 \vspace{0.2em}
 
@@ -474,7 +474,6 @@ This ambitious undertaking demands not only technical expertise but also the abi
 So, while the work that needs to be done is challenging, it is of vital importance:
 it will strengthen the reliability and security of foundational scientific software, safeguarding national infrastructure and advancing best practices in open-source development, while fostering collaboration across academia, industry, government, and non-profits.
 Ultimately, these efforts will create a more resilient computational foundation for research, education, and innovation.
-
 \vspace{0.5em}
 \newline
 \indent \textbf{PI Millman}, Executive Director of UC Berkeley's Open Source Program Office, brings 20+ years of leadership in open-source security and scientific computing.
