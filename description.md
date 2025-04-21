@@ -426,7 +426,7 @@ Integration of frameworks such as OpenSSF’s SLSA and federal cybersecurity man
 
 By addressing these vulnerabilities, the project will significantly enhance the reliability, integrity, and trustworthiness of scientific software, which underpins research, education, and innovation across numerous scientific and engineering disciplines.
 The resulting improvements will help safeguard national security and critical infrastructure, as the $\spose$ is widely used in government, industry, and research settings.
-This work will also foster best practices in open-source development and vulnerability management, serving as a model for other software communities and contributing to improved economic competitiveness and technological leadership for the United States.
+This work will also foster best practices in open-source development and vulnerability management, serving as a model for other software communities and contributing to improved economic competitiveness, resilience, and technological leadership for the United States.
 
 Increased partnerships between academia, industry, government, and non-profit organizations will be facilitated through the collaborative nature of the project, promoting knowledge transfer and shared responsibility for open-source security.
 Ultimately, this initiative will not only secure the $\spose$, but will also contribute to a more robust and inclusive infrastructure for research and education, enabling trustworthy scientific and technological advancements that benefit society as a whole.
