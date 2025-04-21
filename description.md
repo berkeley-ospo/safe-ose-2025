@@ -321,12 +321,16 @@ In parallel, we will refine existing SPECs and draft new ones to address gaps in
 Tooling improvements will be designed for seamless integration with the $\spp$ infrastructure, supporting reproducible builds and automated policy enforcement.
 Feedback and lessons learned from pilot projects will inform further refinements, with focused attention on high-impact packages such as NumPy, SciPy, and scikit-learn to ensure ecosystem-wide applicability.
 
-### Implementation Framework Year 1 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Implementation Framework Year 1 Milestones}
+\vspace{0.2em}
 
-- **Security Summit.** Host the First Scientific Python Security Summit with maintainers from core projects (NumPy, SciPy, pandas) to help guide the work.
+- **Security Summit.** Host the First Scientific Python Security Summit with maintainers from core projects (NumPy, SciPy, pandas).
 - **Public Dashboard.** Publish a public dashboard tracking SPEC adoption and implemenation information.
 
-### Supply Chain Vulnerability Mitigation Year 1 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Supply Chain Vulnerability Mitigation Year 1 Milestones}
+\vspace{0.2em}
 
 - **SCV1---Code Signing.** This milestone implements SPEC 8's framework for securing the release pipeline through cryptographic signing and provenance verification.
 We will operationalize package integrity standards by deploying cryptographic signing workflows for scikit-image, NetworkX, and all $\sptools$.
@@ -335,16 +339,22 @@ Experience gained during implementation will inform revisions to SPEC 8, with an
 We will draft a SPEC for vulnerability management and incident response while developing a prototype federated CVE database with automated dependency graph analysis.
 This system will prioritize transitive risks in projects using C/C++ extensions.
 
-### Access Control Vulnerability Mitigation Year 1 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Access Control Vulnerability Mitigation Year 1 Milestones}
+\vspace{0.2em}
 
 - **ACV1---MFA Adoption.** Implement multi-factor authentication requirements for all SPEC Core Project repository owners.
 This milestone codifies SPEC 6’s recommendation for two-factor authentication.
 - **ACV2---Role-based Access Control.** Deploy role-based access control (RBAC) prototypes in NetworkX and scikit-image, limiting CI/CD tokens to designated workflow files.
+The latter will be enforced through automated tools such as Zizmor and our repository audit tool, \texttt{repo-review}.
 This work operationalizes SPEC 6’s privilege minimization guidance and will serve as a model for broader RBAC adoption.
 - **ACV3---Access Audits.** Develop automated access audit systems, with protocols to revoke permissions after six months of inactivity.
+For example, we may improve on \texttt{sync-teams-action}, and roll it out to a wider set of projects, with \texttt{repo-review} checks in place to ensure that minimal permissions are given.
 This milestone automates SPEC 6’s recommendation to regularly review  permissions, reducing exposure from inactive accounts.
 
-### Insider Attack Vulnerability Mitigation Year 1 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Insider Attack Vulnerability Mitigation Year 1 Milestones}
+\vspace{0.2em}
 
 - **IAV1---Reputation System.**
 We will research existing reputation systems and tools, and engage the community through the SPEC process to define requirements and use cases for a contributor reputation system.
@@ -361,26 +371,35 @@ Our efforts will emphasize robust implementation of cryptographic signing, SBOM 
 We will also refine and deploy reputation and anomaly detection systems at scale, ensuring that security best practices are embedded throughout the $\spose$.
 By targeting both core and domain-specific projects, we aim to establish sustainable, community-driven security practices that can be maintained and evolved beyond the award period.
 
-### Implementation Framework Year 2 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Implementation Framework Year 2 Milestones}
+\vspace{0.2em}
 
 - **Security Summit.** Host the Second Scientific Python Security Summit, focusing on domain-specific stacks (bioinformatics, geospatial) to drive adoption.
 - **Public Dashboard.** Expand the public dashboard to include Critical Vulnerability & Exposure (CVE) tracking and provide dependency chain risk scores.
 
-### Supply Chain Vulnerability Mitigation Year 2 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Supply Chain Vulnerability Mitigation Year 2 Milestones}
+\vspace{0.2em}
 
 - **SCV1---Code Signing and SBOM Validation.** Achieve 100% cryptographic signing adoption across $\spcore$.
 Use the SPEC process to extend code signing practices for SBOM validation and integrate SBOM validation into PyPI and conda-forge pipelines.
 - **SCV2---Vulnerability Management.** Provide automated notifications to downstream users regarding vulnerabilities.
 Integrate with existing dependency tracking tools to ensure comprehensive vulnerability detection and enable efficient patch prioritization for high-risk dependencies.
+Use the \texttt{meeseeksdev} backport bot to ensure that critical patches for updating dependencies are applied to patch releases.
 Automate CVE patch recommendations for nested dependencies in projects using legacy C or Fortran code.
 
-### Access Control Vulnerability Mitigation Year 2 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Access Control Vulnerability Mitigation Year 2 Milestones}
+\vspace{0.2em}
 
 - **ACV1---MFA Adoption.** Extend MFA adoption to all contributors with write access in the top 20 $\spose$ projects.
 - **ACV2---Role-based Access Control.** Scale RBAC implementation to 10 projects, including those with GPU or CUDA kernels requiring heightened privilege controls.
 - **ACV3---Access Audits.** Implement quarterly automated access audits for all projects with more than 10 contributors, with the goal of reducing stale permissions by 70%.
 
-### Insider Attack Vulnerability Mitigation Year 2 Milestones {-}
+\vspace{0.7em}
+\noindent\emph{Insider Attack Vulnerability Mitigation Year 2 Milestones}
+\vspace{0.2em}
 
 - **IAV1---Reputation System.**
 We will further develop and deploy the contributor reputation system across the entire ecosystem, enabling maintainers to flag contributors exhibiting anomalous or high-risk activity.
