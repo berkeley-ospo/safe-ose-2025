@@ -340,8 +340,10 @@ This system will prioritize transitive risks in projects using C/C++ extensions.
 - **ACV1---MFA Adoption.** Implement multi-factor authentication requirements for all SPEC Core Project repository owners.
 This milestone codifies SPEC 6’s recommendation for two-factor authentication.
 - **ACV2---Role-based Access Control.** Deploy role-based access control (RBAC) prototypes in NetworkX and scikit-image, limiting CI/CD tokens to designated workflow files.
+The latter will be enforced through automated tools such as Zizmor and our online audit tool, {\tt repo-review}.
 This work operationalizes SPEC 6’s privilege minimization guidance and will serve as a model for broader RBAC adoption.
 - **ACV3---Access Audits.** Develop automated access audit systems, with protocols to revoke permissions after six months of inactivity.
+For example, we may improve on {\tt sync-teams-action}, and roll it out to a wider set of projects, with {\tt repo-review} checks in place to ensure that minimal permissions are given.
 This milestone automates SPEC 6’s recommendation to regularly review  permissions, reducing exposure from inactive accounts.
 
 ### Insider Attack Vulnerability Mitigation Year 1 Milestones {-}
@@ -372,6 +374,7 @@ By targeting both core and domain-specific projects, we aim to establish sustain
 Use the SPEC process to extend code signing practices for SBOM validation and integrate SBOM validation into PyPI and conda-forge pipelines.
 - **SCV2---Vulnerability Management.** Provide automated notifications to downstream users regarding vulnerabilities.
 Integrate with existing dependency tracking tools to ensure comprehensive vulnerability detection and enable efficient patch prioritization for high-risk dependencies.
+Use the {\tt meeseeksdev} backport bot to ensure that critical patches for updating dependencies are applied to patch releases.
 Automate CVE patch recommendations for nested dependencies in projects using legacy C or Fortran code.
 
 ### Access Control Vulnerability Mitigation Year 2 Milestones {-}
